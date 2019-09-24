@@ -15,6 +15,7 @@ MonoBehaviour:
   m_Bool_keys:
   - pbEnableBackfaceSelection
   - pbFillHoleSelectsEntirePath
+  - pb_SmoothingGroupEditor::m_DrawNormals
   m_Int_keys:
   - pbHandleAlignment
   - pbDefaultEditLevel
@@ -24,14 +25,20 @@ MonoBehaviour:
   m_Float_keys:
   - pbEditorScroll.x
   - pbEditorScroll.y
-  m_String_keys: []
+  - pb_SmoothingGroupEditor::m_NormalsSize
+  - pbBevelAmount
+  m_String_keys:
+  - pbCurrentMaterialPalette
   m_Color_keys: []
   m_Material_keys: []
-  m_Bool_values: 0100
-  m_Int_values: 0000000001000000010000000000000009000000
+  m_Bool_values: 010001
+  m_Int_values: 0000000001000000010000000100000009000000
   m_Float_values:
   - 0
-  - 0
-  m_String_values: []
+  - 67
+  - 0.001
+  - 0.05
+  m_String_values:
+  - Assets/ProCore/ProBuilder/Data/Default Material Palette.asset
   m_Color_values: []
   m_Material_values: []
