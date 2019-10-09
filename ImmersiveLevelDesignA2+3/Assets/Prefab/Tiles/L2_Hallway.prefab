@@ -146,7 +146,7 @@ MonoBehaviour:
       y: 7
     - x: 7
       y: 6
-    _smoothingGroup: 0
+    _smoothingGroup: 1
     _uv:
       useWorldSpace: 0
       flipU: 0
@@ -175,7 +175,7 @@ MonoBehaviour:
       y: 11
     - x: 11
       y: 10
-    _smoothingGroup: 0
+    _smoothingGroup: 1
     _uv:
       useWorldSpace: 0
       flipU: 0
@@ -233,7 +233,7 @@ MonoBehaviour:
       y: 19
     - x: 19
       y: 18
-    _smoothingGroup: 0
+    _smoothingGroup: 1
     _uv:
       useWorldSpace: 0
       flipU: 0
@@ -262,7 +262,7 @@ MonoBehaviour:
       y: 23
     - x: 23
       y: 22
-    _smoothingGroup: 0
+    _smoothingGroup: 1
     _uv:
       useWorldSpace: 0
       flipU: 0
@@ -320,7 +320,7 @@ MonoBehaviour:
       y: 31
     - x: 31
       y: 30
-    _smoothingGroup: 0
+    _smoothingGroup: 1
     _uv:
       useWorldSpace: 0
       flipU: 0
@@ -519,7 +519,7 @@ MonoBehaviour:
       y: 54
     - x: 56
       y: 57
-    _smoothingGroup: 0
+    _smoothingGroup: 1
     _uv:
       useWorldSpace: 0
       flipU: 0
@@ -548,7 +548,7 @@ MonoBehaviour:
       y: 58
     - x: 60
       y: 61
-    _smoothingGroup: 0
+    _smoothingGroup: 1
     _uv:
       useWorldSpace: 0
       flipU: 0
@@ -1505,9 +1505,87 @@ MonoBehaviour:
     areaError: 15
   asset_guid: 
   dontDestroyMeshOnDelete: 0
-  m_selectedFaces: 
-  m_SelectedEdges: []
-  m_selectedTriangles: 
+  m_selectedFaces: 060000000a0000000b0000000e0000000f0000001600000017000000190000001a0000001b000000
+  m_SelectedEdges:
+  - x: 24
+    y: 25
+  - x: 26
+    y: 24
+  - x: 25
+    y: 27
+  - x: 27
+    y: 26
+  - x: 38
+    y: 39
+  - x: 40
+    y: 38
+  - x: 39
+    y: 41
+  - x: 41
+    y: 40
+  - x: 42
+    y: 43
+  - x: 44
+    y: 42
+  - x: 43
+    y: 45
+  - x: 45
+    y: 44
+  - x: 54
+    y: 55
+  - x: 55
+    y: 56
+  - x: 57
+    y: 54
+  - x: 56
+    y: 57
+  - x: 58
+    y: 59
+  - x: 59
+    y: 60
+  - x: 61
+    y: 58
+  - x: 60
+    y: 61
+  - x: 88
+    y: 89
+  - x: 89
+    y: 86
+  - x: 86
+    y: 87
+  - x: 87
+    y: 88
+  - x: 91
+    y: 92
+  - x: 92
+    y: 93
+  - x: 93
+    y: 90
+  - x: 90
+    y: 91
+  - x: 100
+    y: 97
+  - x: 99
+    y: 100
+  - x: 97
+    y: 98
+  - x: 98
+    y: 99
+  - x: 101
+    y: 102
+  - x: 104
+    y: 101
+  - x: 102
+    y: 103
+  - x: 103
+    y: 104
+  - x: 105
+    y: 106
+  - x: 106
+    y: 107
+  - x: 107
+    y: 105
+  m_selectedTriangles: 18000000190000001a000000190000001b0000001a0000002600000027000000280000002700000029000000280000002a0000002b0000002c0000002b0000002d0000002c0000003600000037000000380000003900000036000000380000003a0000003b0000003c0000003d0000003a0000003c0000005600000058000000590000005600000057000000580000005d0000005b0000005c0000005d0000005a0000005b000000640000006100000063000000630000006100000062000000650000006600000068000000680000006600000067000000690000006a0000006b000000
 --- !u!64 &1326311397
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2169,7 +2247,7 @@ MonoBehaviour:
       y: 7
     - x: 7
       y: 6
-    _smoothingGroup: 0
+    _smoothingGroup: 1
     _uv:
       useWorldSpace: 0
       flipU: 0
@@ -2198,7 +2276,7 @@ MonoBehaviour:
       y: 11
     - x: 11
       y: 10
-    _smoothingGroup: 0
+    _smoothingGroup: 1
     _uv:
       useWorldSpace: 0
       flipU: 0
@@ -2256,7 +2334,7 @@ MonoBehaviour:
       y: 19
     - x: 19
       y: 18
-    _smoothingGroup: 0
+    _smoothingGroup: 1
     _uv:
       useWorldSpace: 0
       flipU: 0
@@ -2285,7 +2363,7 @@ MonoBehaviour:
       y: 23
     - x: 23
       y: 22
-    _smoothingGroup: 0
+    _smoothingGroup: 1
     _uv:
       useWorldSpace: 0
       flipU: 0
@@ -2343,7 +2421,7 @@ MonoBehaviour:
       y: 31
     - x: 31
       y: 30
-    _smoothingGroup: 0
+    _smoothingGroup: 1
     _uv:
       useWorldSpace: 0
       flipU: 0
@@ -2542,7 +2620,7 @@ MonoBehaviour:
       y: 54
     - x: 56
       y: 57
-    _smoothingGroup: 0
+    _smoothingGroup: 1
     _uv:
       useWorldSpace: 0
       flipU: 0
@@ -2571,7 +2649,7 @@ MonoBehaviour:
       y: 58
     - x: 60
       y: 61
-    _smoothingGroup: 0
+    _smoothingGroup: 1
     _uv:
       useWorldSpace: 0
       flipU: 0
