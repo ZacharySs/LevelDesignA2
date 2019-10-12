@@ -38,6 +38,7 @@ public class IsometricCameraScript : MonoBehaviour
 
         newCamPos.y = player.transform.position.y + height;
         newCamPos.z = player.transform.position.z - zDisp;
+        newCamPos.x = player.transform.position.x - zDisp;
 
         transform.position = Vector3.Lerp(transform.position, newCamPos, cameraSpeed * Time.deltaTime);
     }

@@ -73,9 +73,14 @@
     <Compile Include="Assets\ProCore\ProGrids\Classes\pg_SceneMeshRender.cs" />
     <Compile Include="Assets\ProCore\ProGrids\Classes\pg_Util.cs" />
     <Compile Include="Assets\ProCore\ProGrids\MonoBehaviour\pg_IgnoreSnap.cs" />
+    <Compile Include="Assets\Scripts\AI\CameraSightScript.cs" />
+    <Compile Include="Assets\Scripts\AI\PatrollingAIMovementScript.cs" />
+    <Compile Include="Assets\Scripts\AI\PatrollingAISightScript.cs" />
+    <Compile Include="Assets\Scripts\AI\TurretSightScript.cs" />
     <Compile Include="Assets\Scripts\CameraSequence.cs" />
     <Compile Include="Assets\Scripts\IsometricCameraScript.cs" />
-    <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Level 2\Doors\SingleDoorScript.cs" />
+    <Compile Include="Assets\Scripts\PlayerMovementScript.cs" />
     <None Include="Assets\ProCore\ProGrids\Shader\pg_GridShader.shader" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_TransparentOverlay.shader" />
     <None Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\README.txt" />
