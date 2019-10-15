@@ -80,6 +80,11 @@
     <Compile Include="Assets\Scripts\AI\PatrollingAIMovementScript.cs" />
     <Compile Include="Assets\Scripts\AI\PatrollingAISightScript.cs" />
     <Compile Include="Assets\Scripts\AI\TurretSightScript.cs" />
+    <Compile Include="Assets\Scripts\AIandSecurity\CameraSightScript.cs" />
+    <Compile Include="Assets\Scripts\AIandSecurity\ControlPanelScript.cs" />
+    <Compile Include="Assets\Scripts\AIandSecurity\PatrollingAIMovementScript.cs" />
+    <Compile Include="Assets\Scripts\AIandSecurity\PatrollingAISightScript.cs" />
+    <Compile Include="Assets\Scripts\AIandSecurity\TurretSightScript.cs" />
     <Compile Include="Assets\Scripts\CameraSequence.cs" />
     <Compile Include="Assets\Scripts\IsometricCameraScript.cs" />
     <Compile Include="Assets\Scripts\Level 2\Doors\SingleDoorScript.cs" />
