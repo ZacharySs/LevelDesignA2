@@ -15,6 +15,22 @@ public class PatrollingAISightScript : MonoBehaviour
     private Renderer playerRend;
     private Color storedColor;
 
+    /* HOW TO USE 
+     * -Stationary Guards-
+     * Drag and Drop into world
+     * They will detect the player in front of them within a certain angle
+     * 
+     * -Patrolling Guards-
+     * Drag and Drop into World
+     * They will also need a AI Way Point prefab as well
+     * The patrolling AI will travel from waypoint to waypoint 
+     * in the order that you set teh way points up on the inspector.
+     * To do this go to the GaurdPatrol and drag the way point objetcs
+     * to the corresponding element slot in the inspector.
+     * Element 0 being the first point it will travel to and and flooping through the 
+     * list until the last and then repeating the list.
+    */ 
+
     void Awake()
     {
         nav = GetComponent<NavMeshAgent>();

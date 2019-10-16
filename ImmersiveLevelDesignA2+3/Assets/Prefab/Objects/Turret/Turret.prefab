@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3192439525665166051}
-  - component: {fileID: 3192439525665166050}
   - component: {fileID: 3192439525665166077}
   - component: {fileID: 3192439525665166076}
+  - component: {fileID: 392146963}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Untagged
@@ -35,19 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &3192439525665166050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3192439525665166048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dd8d7d996167874ba67f3c34de3e6fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerInSight: 0
 --- !u!65 &3192439525665166077
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -156,6 +143,19 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 0
   m_Loop: 0
+--- !u!114 &392146963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3192439525665166048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef7529aff4f54892b3e363657ac36d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInSight: 0
 --- !u!1 &3192439525742970638
 GameObject:
   m_ObjectHideFlags: 0
