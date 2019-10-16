@@ -87,6 +87,7 @@
     <Compile Include="Assets\Scripts\AIandSecurity\TurretSightScript.cs" />
     <Compile Include="Assets\Scripts\CameraSequence.cs" />
     <Compile Include="Assets\Scripts\IsometricCameraScript.cs" />
+    <Compile Include="Assets\Scripts\Level 2\Doors\HallwayDoorScript.cs" />
     <Compile Include="Assets\Scripts\Level 2\Doors\SingleDoorScript.cs" />
     <Compile Include="Assets\Scripts\PlayerMovementScript.cs" />
     <None Include="Assets\ProCore\ProGrids\Shader\pg_GridShader.shader" />
