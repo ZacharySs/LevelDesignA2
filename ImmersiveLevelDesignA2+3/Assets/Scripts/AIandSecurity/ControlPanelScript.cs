@@ -14,16 +14,6 @@ public class ControlPanelScript : MonoBehaviour
     private SphereCollider securityCameraTrigger;
     private Light securityCameraLight;
 
-    // HOW TO USE //
-    // Drag and drop the control panel prefab in the world
-    // In the inspector you will need to drag the camera object
-    // to the Security Camera property in the inspector to link them
-    // together.
-    // **IMPORTANT** - Do not override the control panel prefab as this will link
-    // all control panels to the same camera.
-    // You can also alter how long the camera will be disabled for via the 
-    // Camera Disable Time property in the inspector
-
     // Start is called before the first frame update
     void Start()
     {

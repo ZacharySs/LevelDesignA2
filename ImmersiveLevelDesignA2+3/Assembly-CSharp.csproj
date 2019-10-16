@@ -116,19 +116,19 @@
     <None Include="Assets\ProCore\ProBuilder\readme.txt" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_SmoothingPreview.shader" />
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>/Users/joelparsons/Desktop/Sem 2 2019/IGB321/Hyde &amp; Jekyl/ImmersiveLevelDesignA2+3/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>/Users/joelparsons/Desktop/Sem 2 2019/IGB321/Jekyll &amp; Hyde/ImmersiveLevelDesignA2+3/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>/Users/joelparsons/Desktop/Sem 2 2019/IGB321/Hyde &amp; Jekyl/ImmersiveLevelDesignA2+3/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>/Users/joelparsons/Desktop/Sem 2 2019/IGB321/Jekyll &amp; Hyde/ImmersiveLevelDesignA2+3/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>/Users/joelparsons/Desktop/Sem 2 2019/IGB321/Hyde &amp; Jekyl/ImmersiveLevelDesignA2+3/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>/Users/joelparsons/Desktop/Sem 2 2019/IGB321/Jekyll &amp; Hyde/ImmersiveLevelDesignA2+3/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>/Users/joelparsons/Desktop/Sem 2 2019/IGB321/Hyde &amp; Jekyl/ImmersiveLevelDesignA2+3/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>/Users/joelparsons/Desktop/Sem 2 2019/IGB321/Jekyll &amp; Hyde/ImmersiveLevelDesignA2+3/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>/Users/joelparsons/Desktop/Sem 2 2019/IGB321/Hyde &amp; Jekyl/ImmersiveLevelDesignA2+3/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>/Users/joelparsons/Desktop/Sem 2 2019/IGB321/Jekyll &amp; Hyde/ImmersiveLevelDesignA2+3/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -335,28 +335,28 @@
       <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="ProBuilderMeshOps-Unity5">
-      <HintPath>/Users/joelparsons/Desktop/Sem 2 2019/IGB321/Hyde &amp; Jekyl/ImmersiveLevelDesignA2+3/Assets/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
+      <HintPath>/Users/joelparsons/Desktop/Sem 2 2019/IGB321/Jekyll &amp; Hyde/ImmersiveLevelDesignA2+3/Assets/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
     </Reference>
     <Reference Include="ProBuilderCore-Unity5">
-      <HintPath>/Users/joelparsons/Desktop/Sem 2 2019/IGB321/Hyde &amp; Jekyl/ImmersiveLevelDesignA2+3/Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
+      <HintPath>/Users/joelparsons/Desktop/Sem 2 2019/IGB321/Jekyll &amp; Hyde/ImmersiveLevelDesignA2+3/Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
     </Reference>
     <Reference Include="pb_Stl">
-      <HintPath>/Users/joelparsons/Desktop/Sem 2 2019/IGB321/Hyde &amp; Jekyl/ImmersiveLevelDesignA2+3/Assets/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
+      <HintPath>/Users/joelparsons/Desktop/Sem 2 2019/IGB321/Jekyll &amp; Hyde/ImmersiveLevelDesignA2+3/Assets/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
     </Reference>
     <Reference Include="KdTreeLib">
-      <HintPath>/Users/joelparsons/Desktop/Sem 2 2019/IGB321/Hyde &amp; Jekyl/ImmersiveLevelDesignA2+3/Assets/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
+      <HintPath>/Users/joelparsons/Desktop/Sem 2 2019/IGB321/Jekyll &amp; Hyde/ImmersiveLevelDesignA2+3/Assets/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
     </Reference>
     <Reference Include="Poly2Tri">
-      <HintPath>/Users/joelparsons/Desktop/Sem 2 2019/IGB321/Hyde &amp; Jekyl/ImmersiveLevelDesignA2+3/Assets/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
+      <HintPath>/Users/joelparsons/Desktop/Sem 2 2019/IGB321/Jekyll &amp; Hyde/ImmersiveLevelDesignA2+3/Assets/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>/Users/joelparsons/Desktop/Sem 2 2019/IGB321/Hyde &amp; Jekyl/ImmersiveLevelDesignA2+3/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>/Users/joelparsons/Desktop/Sem 2 2019/IGB321/Jekyll &amp; Hyde/ImmersiveLevelDesignA2+3/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>/Users/joelparsons/Desktop/Sem 2 2019/IGB321/Hyde &amp; Jekyl/ImmersiveLevelDesignA2+3/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>/Users/joelparsons/Desktop/Sem 2 2019/IGB321/Jekyll &amp; Hyde/ImmersiveLevelDesignA2+3/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>/Users/joelparsons/Desktop/Sem 2 2019/IGB321/Hyde &amp; Jekyl/ImmersiveLevelDesignA2+3/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>/Users/joelparsons/Desktop/Sem 2 2019/IGB321/Jekyll &amp; Hyde/ImmersiveLevelDesignA2+3/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>/Applications/Unity/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

@@ -19,7 +19,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 1
+  m_StaticEditorFlags: 127
   m_IsActive: 1
 --- !u!4 &207115190
 Transform:
@@ -5862,7 +5862,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 1
+  m_StaticEditorFlags: 127
   m_IsActive: 1
 --- !u!4 &1681580918
 Transform:
@@ -8963,7 +8963,7 @@ GameObject:
   - component: {fileID: 1401760765}
   - component: {fileID: 6053967101587027139}
   m_Layer: 0
-  m_Name: L2_SingleDoor
+  m_Name: SingleDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8995,7 +8995,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3, y: 2, z: 4}
+  m_Size: {x: 2.5, y: 2, z: 3}
   m_Center: {x: -0.75, y: 1.25, z: 0}
 --- !u!114 &1401760765
 MonoBehaviour:

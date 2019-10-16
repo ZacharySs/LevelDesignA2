@@ -12,12 +12,6 @@ public class TurretSightScript : MonoBehaviour
     private Color storedColor;
     private LineRenderer lineRenderer;
     
-    // HOW TO USE //
-    // Drag and Drop the turret into the world
-    // Editing the length of the Box Collider will also
-    // alter the length of the line renderer. So if you wish to make
-    // the detection range longer, just change the box collider length
-    // in the inspector.
 
     void Awake()
     {
