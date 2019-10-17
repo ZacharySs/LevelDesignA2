@@ -146,7 +146,7 @@ MonoBehaviour:
       y: 7
     - x: 7
       y: 6
-    _smoothingGroup: 0
+    _smoothingGroup: 1
     _uv:
       useWorldSpace: 0
       flipU: 0
@@ -175,7 +175,7 @@ MonoBehaviour:
       y: 11
     - x: 11
       y: 10
-    _smoothingGroup: 0
+    _smoothingGroup: 1
     _uv:
       useWorldSpace: 0
       flipU: 0
@@ -233,7 +233,7 @@ MonoBehaviour:
       y: 19
     - x: 19
       y: 18
-    _smoothingGroup: 0
+    _smoothingGroup: 1
     _uv:
       useWorldSpace: 0
       flipU: 0
@@ -262,7 +262,7 @@ MonoBehaviour:
       y: 23
     - x: 23
       y: 22
-    _smoothingGroup: 0
+    _smoothingGroup: 1
     _uv:
       useWorldSpace: 0
       flipU: 0
@@ -320,7 +320,7 @@ MonoBehaviour:
       y: 31
     - x: 31
       y: 30
-    _smoothingGroup: 0
+    _smoothingGroup: 1
     _uv:
       useWorldSpace: 0
       flipU: 0
@@ -349,7 +349,7 @@ MonoBehaviour:
       y: 35
     - x: 35
       y: 34
-    _smoothingGroup: 0
+    _smoothingGroup: 1
     _uv:
       useWorldSpace: 0
       flipU: 0
@@ -407,7 +407,7 @@ MonoBehaviour:
       y: 43
     - x: 43
       y: 42
-    _smoothingGroup: 0
+    _smoothingGroup: 1
     _uv:
       useWorldSpace: 0
       flipU: 0
@@ -436,7 +436,7 @@ MonoBehaviour:
       y: 47
     - x: 47
       y: 46
-    _smoothingGroup: 0
+    _smoothingGroup: 1
     _uv:
       useWorldSpace: 0
       flipU: 0
@@ -494,7 +494,7 @@ MonoBehaviour:
       y: 55
     - x: 55
       y: 54
-    _smoothingGroup: 0
+    _smoothingGroup: 1
     _uv:
       useWorldSpace: 0
       flipU: 0
@@ -523,7 +523,7 @@ MonoBehaviour:
       y: 59
     - x: 59
       y: 58
-    _smoothingGroup: 0
+    _smoothingGroup: 1
     _uv:
       useWorldSpace: 0
       flipU: 0
@@ -2645,7 +2645,7 @@ MonoBehaviour:
       y: 7
     - x: 7
       y: 6
-    _smoothingGroup: 0
+    _smoothingGroup: 1
     _uv:
       useWorldSpace: 0
       flipU: 0
@@ -2674,7 +2674,7 @@ MonoBehaviour:
       y: 11
     - x: 11
       y: 10
-    _smoothingGroup: 0
+    _smoothingGroup: 1
     _uv:
       useWorldSpace: 0
       flipU: 0
@@ -2732,7 +2732,7 @@ MonoBehaviour:
       y: 19
     - x: 19
       y: 18
-    _smoothingGroup: 0
+    _smoothingGroup: 1
     _uv:
       useWorldSpace: 0
       flipU: 0
@@ -2761,7 +2761,7 @@ MonoBehaviour:
       y: 23
     - x: 23
       y: 22
-    _smoothingGroup: 0
+    _smoothingGroup: 1
     _uv:
       useWorldSpace: 0
       flipU: 0
@@ -2819,7 +2819,7 @@ MonoBehaviour:
       y: 31
     - x: 31
       y: 30
-    _smoothingGroup: 0
+    _smoothingGroup: 1
     _uv:
       useWorldSpace: 0
       flipU: 0
@@ -2848,7 +2848,7 @@ MonoBehaviour:
       y: 35
     - x: 35
       y: 34
-    _smoothingGroup: 0
+    _smoothingGroup: 1
     _uv:
       useWorldSpace: 0
       flipU: 0
@@ -2906,7 +2906,7 @@ MonoBehaviour:
       y: 43
     - x: 43
       y: 42
-    _smoothingGroup: 0
+    _smoothingGroup: 1
     _uv:
       useWorldSpace: 0
       flipU: 0
@@ -2935,7 +2935,7 @@ MonoBehaviour:
       y: 47
     - x: 47
       y: 46
-    _smoothingGroup: 0
+    _smoothingGroup: 1
     _uv:
       useWorldSpace: 0
       flipU: 0
@@ -2993,7 +2993,7 @@ MonoBehaviour:
       y: 55
     - x: 55
       y: 54
-    _smoothingGroup: 0
+    _smoothingGroup: 1
     _uv:
       useWorldSpace: 0
       flipU: 0
@@ -3022,7 +3022,7 @@ MonoBehaviour:
       y: 59
     - x: 59
       y: 58
-    _smoothingGroup: 0
+    _smoothingGroup: 1
     _uv:
       useWorldSpace: 0
       flipU: 0
