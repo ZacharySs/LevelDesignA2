@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6954817234089046542}
   - component: {fileID: 6954817234089046543}
   - component: {fileID: 6954817234089046536}
+  - component: {fileID: 801331791748899817}
   m_Layer: 0
   m_Name: Elevator (0)
   m_TagString: Untagged
@@ -644,33 +645,9 @@ MonoBehaviour:
     areaError: 15
   asset_guid: 
   dontDestroyMeshOnDelete: 0
-  m_selectedFaces: 020000000400000006000000
-  m_SelectedEdges:
-  - x: 10
-    y: 11
-  - x: 11
-    y: 8
-  - x: 8
-    y: 9
-  - x: 9
-    y: 10
-  - x: 17
-    y: 18
-  - x: 18
-    y: 19
-  - x: 16
-    y: 17
-  - x: 19
-    y: 16
-  - x: 25
-    y: 26
-  - x: 26
-    y: 27
-  - x: 24
-    y: 25
-  - x: 27
-    y: 24
-  m_selectedTriangles: 080000000a0000000b00000008000000090000000a000000110000001200000013000000100000001100000013000000190000001a0000001b00000018000000190000001b000000
+  m_selectedFaces: 
+  m_SelectedEdges: []
+  m_selectedTriangles: 
 --- !u!64 &6954817234089046536
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -685,6 +662,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 0}
+--- !u!65 &801331791748899817
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6954817234089046537}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3, y: 2.5, z: 3}
+  m_Center: {x: 1.5, y: 1.25, z: -0.5}
 --- !u!1 &6954817235106252896
 GameObject:
   m_ObjectHideFlags: 0
