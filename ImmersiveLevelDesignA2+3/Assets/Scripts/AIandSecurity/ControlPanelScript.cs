@@ -6,10 +6,15 @@ public class ControlPanelScript : MonoBehaviour
 {
     public bool playerInRange;
     public bool CameraDisabled;
-    public int CameraDisbaleTime;
+    public bool TurretDisabled;
+    public int DisbaleTime;
     
 
     public GameObject securityCamera;
+    public GameObject turret;
+
+    private BoxCollider turretTrigger;
+    private LineRenderer turretLine;
 
     private SphereCollider securityCameraTrigger;
     private Light securityCameraLight;
@@ -28,27 +33,33 @@ public class ControlPanelScript : MonoBehaviour
     void Start()
     {
         CameraDisabled = false;
+        TurretDisabled = false;
         securityCameraTrigger = securityCamera.GetComponent<SphereCollider>();
         securityCameraLight = securityCamera.GetComponentInChildren<Light>();
+        turretTrigger = turret.GetComponent<BoxCollider>();
+        turretLine = turret.GetComponent<LineRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        DisableCamera();   
+        Disable();   
     }
 
-    IEnumerator ReactivateCamera()
+    IEnumerator Reactivate()
     {
-        yield return new WaitForSeconds(CameraDisbaleTime);
-        EnableCamera();
+        yield return new WaitForSeconds(DisbaleTime);
+        Enable();
     }
 
-    private void EnableCamera()
+    private void Enable()
     {
         securityCameraTrigger.enabled = true;
         securityCameraLight.enabled = true;
+        turretTrigger.enabled = true;
+        turretLine.enabled = true;
         CameraDisabled = false;
+        TurretDisabled = false;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -67,14 +78,17 @@ public class ControlPanelScript : MonoBehaviour
         }
     }
 
-    private void DisableCamera()
+    private void Disable()
     {
-        if(playerInRange == true & Input.GetKeyDown(KeyCode.E) & securityCameraTrigger.enabled == true)
+        if (playerInRange == true & Input.GetKeyDown(KeyCode.E) & securityCameraTrigger.enabled == true & turretTrigger.enabled == true)
         {
             securityCameraTrigger.enabled = false;
             securityCameraLight.enabled = false;
+            turretLine.enabled = false;
+            turretTrigger.enabled = false;
             CameraDisabled = true;
-            StartCoroutine(ReactivateCamera());
+            TurretDisabled = true;
+            StartCoroutine(Reactivate());
         }
     }
 }

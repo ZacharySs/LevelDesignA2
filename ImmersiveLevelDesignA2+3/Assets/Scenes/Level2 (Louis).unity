@@ -2371,6 +2371,12 @@ Transform:
   m_Father: {fileID: 2041826743}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &876312341 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3192439525665166048, guid: 64bdacb3c5d83924398bdd2fa2d67a7b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1177137938}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1021557127
 GameObject:
   m_ObjectHideFlags: 0
@@ -8066,6 +8072,33 @@ Transform:
   m_Father: {fileID: 2041826743}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1925798086 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2789545316269571515, guid: 178febeb3addb5a4e9d40feb487b9faa,
+    type: 3}
+  m_PrefabInstance: {fileID: 2789545315642861966}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1925798087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925798086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae6af4f33b046424898c5b6236a2f0ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInRange: 0
+  CameraDisabled: 0
+  TurretDisabled: 0
+  DisbaleTime: 0
+  securityCameras:
+  - {fileID: 196191387}
+  turrets:
+  - {fileID: 1707003381}
+  - {fileID: 876312341}
 --- !u!1 &1945822817
 GameObject:
   m_ObjectHideFlags: 0
@@ -10416,6 +10449,21 @@ PrefabInstance:
       propertyPath: securityCamera
       value: 
       objectReference: {fileID: 196191387}
+    - target: {fileID: 3334355632220924381, guid: 178febeb3addb5a4e9d40feb487b9faa,
+        type: 3}
+      propertyPath: turret
+      value: 
+      objectReference: {fileID: 876312341}
+    - target: {fileID: 3334355632220924381, guid: 178febeb3addb5a4e9d40feb487b9faa,
+        type: 3}
+      propertyPath: DisbaleTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3334355632220924381, guid: 178febeb3addb5a4e9d40feb487b9faa,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 178febeb3addb5a4e9d40feb487b9faa, type: 3}
 --- !u!1001 &3192439526943725133
