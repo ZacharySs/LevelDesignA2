@@ -77,6 +77,7 @@
     <Compile Include="Assets\ProCore\ProGrids\Classes\pg_Util.cs" />
     <Compile Include="Assets\ProCore\ProGrids\MonoBehaviour\pg_IgnoreSnap.cs" />
     <Compile Include="Assets\Scripts\AIandSecurity\CameraSightScript.cs" />
+    <Compile Include="Assets\Scripts\AIandSecurity\ControlPanel2Script.cs" />
     <Compile Include="Assets\Scripts\AIandSecurity\ControlPanelScript.cs" />
     <Compile Include="Assets\Scripts\AIandSecurity\PatrollingAIMovementScript.cs" />
     <Compile Include="Assets\Scripts\AIandSecurity\PatrollingAISightScript.cs" />
