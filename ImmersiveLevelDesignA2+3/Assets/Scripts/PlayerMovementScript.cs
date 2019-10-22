@@ -7,14 +7,19 @@ public class PlayerMovementScript : MonoBehaviour
     public GameObject avatar;
 
     //Movement
-    public float moveSpeed = 5;
+    public float moveSpeed = 50;
     private Vector3 playerPosition;
     private Rigidbody rb;
+
+    CharacterController charController;
+    Vector3 moveDir;
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        //rb = GetComponent<Rigidbody>();
+
+        charController = GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
@@ -56,29 +61,29 @@ public class PlayerMovementScript : MonoBehaviour
 
     void Movement()
     {
-        playerPosition = transform.position;
+        //Calculating direction of movement + how fast the player should be moving
+        if (Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0)
+        {
+            //playerPosition.z = playerPosition.z - moveSpeed * Time.deltaTime;
+            Vector3 lateral = (Vector3.left + Vector3.back) * Input.GetAxis("Vertical");
 
-        //Forwards and Back
-        if (Input.GetKey("w"))
-        {
-            playerPosition.z = playerPosition.z - moveSpeed * Time.deltaTime;
-        }
-        else if (Input.GetKey("s"))
-        {
-            playerPosition.z = playerPosition.z + moveSpeed * Time.deltaTime;
-        }
+            Vector3 vertical = (Vector3.left + Vector3.forward) * Input.GetAxis("Horizontal");
 
-        //Strafing 
-        if (Input.GetKey("a"))
-        {
-            playerPosition.x = playerPosition.x + moveSpeed * Time.deltaTime;
+            moveDir = (lateral + vertical).normalized;
+
+
+            moveDir *= moveSpeed * Mathf.Clamp01(Mathf.Abs(Input.GetAxis("Horizontal")) + Mathf.Abs(Input.GetAxis("Vertical")));
+
         }
-        else if (Input.GetKey("d"))
+        else if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") == 0)
         {
-            playerPosition.x = playerPosition.x - moveSpeed * Time.deltaTime;
+            moveDir = new Vector3(0, 0, 0);
         }
 
-        transform.position = playerPosition;
-        rb.velocity = new Vector3(0, 0, 0);   //Freeze velocity
+        charController.SimpleMove(moveDir);
+
+        //transform.position = playerPosition;
+        //rb.velocity = new Vector3(0, 0, 0);   //Freeze velocity
+
     }
 }
