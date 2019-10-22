@@ -18,8 +18,8 @@ GameObject:
   - component: {fileID: 3344784170199361495}
   - component: {fileID: 3344784170199361484}
   m_Layer: 0
-  m_Name: AI-Guard
-  m_TagString: Untagged
+  m_Name: AI-GuardPatrol
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

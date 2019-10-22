@@ -34,7 +34,9 @@ public class PatrollingAISightScript : MonoBehaviour
     void Awake()
     {
         nav = GetComponent<NavMeshAgent>();
-        col = GetComponent<SphereCollider>();
+        col = GetComponentInChildren<SphereCollider>();
+        //col = GetComponent<SphereCollider>();
+        Debug.Log(col);
 
         player = GameObject.FindGameObjectWithTag("Player");
         playerRend = player.GetComponent<MeshRenderer>();

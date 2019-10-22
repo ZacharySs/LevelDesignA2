@@ -41,7 +41,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 0
-  m_Color: {r: 0.9528302, g: 0.9235004, b: 0.7775454, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_Intensity: 1.5
   m_Range: 9.71
   m_SpotAngle: 90.9
@@ -57,7 +57,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -98,7 +98,7 @@ Transform:
   m_GameObject: {fileID: 3694428128038859110}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.22, y: 19.088915, z: -50.96}
-  m_LocalScale: {x: 1, y: 0.37709, z: 0.28648}
+  m_LocalScale: {x: 1, y: 0.37709, z: 0.28648007}
   m_Children:
   - {fileID: 3694428127561166006}
   m_Father: {fileID: 0}

@@ -13,14 +13,14 @@ public class HallwayDoorScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" || other.tag == "Enemy")
         {
             animator.SetTrigger("CycleHallwayDoor");
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" || other.tag == "Enemy")
         {
             animator.SetTrigger("CycleHallwayDoor");
         }

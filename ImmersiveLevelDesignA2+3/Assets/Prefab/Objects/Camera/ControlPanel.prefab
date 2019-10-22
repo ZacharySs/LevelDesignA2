@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2789545316269571510}
   - component: {fileID: 2789545316269571513}
   - component: {fileID: 2789545316269571512}
-  - component: {fileID: 3334355632220924381}
+  - component: {fileID: 4458431052329120066}
   m_Layer: 0
   m_Name: ControlPanel
   m_TagString: Untagged
@@ -92,7 +92,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1.7190441}
   m_Center: {x: 0, y: 0, z: 0.35952187}
---- !u!114 &3334355632220924381
+--- !u!114 &4458431052329120066
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -101,10 +101,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2789545316269571515}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5592e8d577e25d746936719c5d6de583, type: 3}
+  m_Script: {fileID: 11500000, guid: ae6af4f33b046424898c5b6236a2f0ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerInRange: 0
   CameraDisabled: 0
-  CameraDisbaleTime: 5
-  securityCamera: {fileID: 0}
+  TurretDisabled: 0
+  DisbaleTime: 0
+  securityCameras: []
+  turrets: []
