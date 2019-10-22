@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2175111010426281126}
   - component: {fileID: 2175111010426281127}
   - component: {fileID: 2175111010426281124}
-  - component: {fileID: 2175111010426281125}
   m_Layer: 0
   m_Name: L2_OperatingTable_Wheel
   m_TagString: Untagged
@@ -1048,20 +1047,6 @@ MonoBehaviour:
   m_selectedFaces: 
   m_SelectedEdges: []
   m_selectedTriangles: 
---- !u!64 &2175111010426281125
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2175111010426281131}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 0}
 --- !u!1 &2175111010537359706
 GameObject:
   m_ObjectHideFlags: 0
@@ -1075,7 +1060,6 @@ GameObject:
   - component: {fileID: 2175111010537359702}
   - component: {fileID: 2175111010537359703}
   - component: {fileID: 2175111010537359700}
-  - component: {fileID: 2175111010537359701}
   m_Layer: 0
   m_Name: L2_OperatingTable_Wheel
   m_TagString: Untagged
@@ -2110,20 +2094,6 @@ MonoBehaviour:
   m_selectedFaces: 
   m_SelectedEdges: []
   m_selectedTriangles: 
---- !u!64 &2175111010537359701
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2175111010537359706}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 0}
 --- !u!1 &2175111010537914986
 GameObject:
   m_ObjectHideFlags: 0
@@ -2137,7 +2107,6 @@ GameObject:
   - component: {fileID: 2175111010537914977}
   - component: {fileID: 2175111010537914982}
   - component: {fileID: 2175111010537914983}
-  - component: {fileID: 2175111010537914980}
   m_Layer: 0
   m_Name: L2_OperatingTable_WheelHub (2)
   m_TagString: Untagged
@@ -3055,20 +3024,6 @@ MonoBehaviour:
   m_selectedFaces: 
   m_SelectedEdges: []
   m_selectedTriangles: 
---- !u!64 &2175111010537914980
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2175111010537914986}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 0}
 --- !u!1 &2175111010611517586
 GameObject:
   m_ObjectHideFlags: 0
@@ -3082,7 +3037,6 @@ GameObject:
   - component: {fileID: 2175111010611517609}
   - component: {fileID: 2175111010611517614}
   - component: {fileID: 2175111010611517615}
-  - component: {fileID: 2175111010611517612}
   m_Layer: 0
   m_Name: L2_OperatingTable_WheelHub (3)
   m_TagString: Untagged
@@ -4000,20 +3954,6 @@ MonoBehaviour:
   m_selectedFaces: 
   m_SelectedEdges: []
   m_selectedTriangles: 
---- !u!64 &2175111010611517612
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2175111010611517586}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 0}
 --- !u!1 &2175111010676621523
 GameObject:
   m_ObjectHideFlags: 0
@@ -4027,7 +3967,6 @@ GameObject:
   - component: {fileID: 2175111010676621551}
   - component: {fileID: 2175111010676621548}
   - component: {fileID: 2175111010676621549}
-  - component: {fileID: 2175111010676621522}
   m_Layer: 0
   m_Name: L2_OperatingTable_Leg
   m_TagString: Untagged
@@ -5062,20 +5001,6 @@ MonoBehaviour:
   m_selectedFaces: 
   m_SelectedEdges: []
   m_selectedTriangles: 
---- !u!64 &2175111010676621522
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2175111010676621523}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 0}
 --- !u!1 &2175111011128995604
 GameObject:
   m_ObjectHideFlags: 0
@@ -5089,7 +5014,6 @@ GameObject:
   - component: {fileID: 2175111011128995600}
   - component: {fileID: 2175111011128995601}
   - component: {fileID: 2175111011128995606}
-  - component: {fileID: 2175111011128995607}
   m_Layer: 0
   m_Name: L2_OperatingTable_Leg (3)
   m_TagString: Untagged
@@ -6124,20 +6048,6 @@ MonoBehaviour:
   m_selectedFaces: 
   m_SelectedEdges: []
   m_selectedTriangles: 
---- !u!64 &2175111011128995607
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2175111011128995604}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 0}
 --- !u!1 &2175111011235175311
 GameObject:
   m_ObjectHideFlags: 0
@@ -6151,7 +6061,6 @@ GameObject:
   - component: {fileID: 2175111011235175306}
   - component: {fileID: 2175111011235175307}
   - component: {fileID: 2175111011235175304}
-  - component: {fileID: 2175111011235175305}
   m_Layer: 0
   m_Name: L2_OperatingTable_Wheel
   m_TagString: Untagged
@@ -7186,20 +7095,6 @@ MonoBehaviour:
   m_selectedFaces: 
   m_SelectedEdges: []
   m_selectedTriangles: 
---- !u!64 &2175111011235175305
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2175111011235175311}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 0}
 --- !u!1 &2175111011293727212
 GameObject:
   m_ObjectHideFlags: 0
@@ -7213,7 +7108,6 @@ GameObject:
   - component: {fileID: 2175111011293727208}
   - component: {fileID: 2175111011293727209}
   - component: {fileID: 2175111011293727214}
-  - component: {fileID: 2175111011293727215}
   m_Layer: 0
   m_Name: L2_OperatingTable_Leg (1)
   m_TagString: Untagged
@@ -8248,20 +8142,6 @@ MonoBehaviour:
   m_selectedFaces: 
   m_SelectedEdges: []
   m_selectedTriangles: 
---- !u!64 &2175111011293727215
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2175111011293727212}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 0}
 --- !u!1 &2175111011367430829
 GameObject:
   m_ObjectHideFlags: 0
@@ -8275,7 +8155,6 @@ GameObject:
   - component: {fileID: 2175111011367430824}
   - component: {fileID: 2175111011367430825}
   - component: {fileID: 2175111011367430830}
-  - component: {fileID: 2175111011367430831}
   m_Layer: 0
   m_Name: L2_OperatingTable_Wheel
   m_TagString: Untagged
@@ -9310,20 +9189,6 @@ MonoBehaviour:
   m_selectedFaces: 
   m_SelectedEdges: []
   m_selectedTriangles: 
---- !u!64 &2175111011367430831
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2175111011367430829}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 0}
 --- !u!1 &2175111011545955225
 GameObject:
   m_ObjectHideFlags: 0
@@ -9337,7 +9202,6 @@ GameObject:
   - component: {fileID: 2175111011545955220}
   - component: {fileID: 2175111011545955221}
   - component: {fileID: 2175111011545955226}
-  - component: {fileID: 2175111011545955227}
   m_Layer: 0
   m_Name: L2_OperatingTable_WheelHub (1)
   m_TagString: Untagged
@@ -10255,20 +10119,6 @@ MonoBehaviour:
   m_selectedFaces: 
   m_SelectedEdges: []
   m_selectedTriangles: 
---- !u!64 &2175111011545955227
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2175111011545955225}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 0}
 --- !u!1 &2175111011990408499
 GameObject:
   m_ObjectHideFlags: 0
@@ -10282,7 +10132,6 @@ GameObject:
   - component: {fileID: 2175111011990408654}
   - component: {fileID: 2175111011990408655}
   - component: {fileID: 2175111011990408652}
-  - component: {fileID: 2175111011990408653}
   - component: {fileID: 517177641708685236}
   - component: {fileID: 3993926985564868420}
   m_Layer: 0
@@ -13127,20 +12976,6 @@ MonoBehaviour:
   m_selectedFaces: 
   m_SelectedEdges: []
   m_selectedTriangles: 
---- !u!64 &2175111011990408653
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2175111011990408499}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 0}
 --- !u!65 &517177641708685236
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13152,8 +12987,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.0000005, y: 0.09375, z: 2.0000007}
-  m_Center: {x: -1.4999995, y: 0.046875, z: -0.9999996}
+  m_Size: {x: 3.0000005, y: 1.26, z: 2}
+  m_Center: {x: -1.4999995, y: -0.54, z: -1}
 --- !u!54 &3993926985564868420
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13183,7 +13018,6 @@ GameObject:
   - component: {fileID: 2175111012008480869}
   - component: {fileID: 2175111012008480874}
   - component: {fileID: 2175111012008480875}
-  - component: {fileID: 2175111012008480872}
   m_Layer: 0
   m_Name: L2_OperatingTable_WheelHub
   m_TagString: Untagged
@@ -14101,20 +13935,6 @@ MonoBehaviour:
   m_selectedFaces: 
   m_SelectedEdges: []
   m_selectedTriangles: 
---- !u!64 &2175111012008480872
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2175111012008480873}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 0}
 --- !u!1 &2175111012165025958
 GameObject:
   m_ObjectHideFlags: 0
@@ -14128,7 +13948,6 @@ GameObject:
   - component: {fileID: 2175111012165025954}
   - component: {fileID: 2175111012165025955}
   - component: {fileID: 2175111012165025952}
-  - component: {fileID: 2175111012165025953}
   m_Layer: 0
   m_Name: L2_OperatingTable_Leg (2)
   m_TagString: Untagged
@@ -15163,17 +14982,3 @@ MonoBehaviour:
   m_selectedFaces: 
   m_SelectedEdges: []
   m_selectedTriangles: 
---- !u!64 &2175111012165025953
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2175111012165025958}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 0}
