@@ -8,6 +8,8 @@ public class IsometricCameraScript : MonoBehaviour
 
     public float height;
     public float zDisp;
+    [HideInInspector]
+    public float camShake;
 
     public float cameraSpeed = 1.0f;
     private Vector3 newCamPos;
@@ -37,9 +39,11 @@ public class IsometricCameraScript : MonoBehaviour
         newCamPos = player.transform.position;
 
         newCamPos.y = player.transform.position.y + height;
-        newCamPos.z = player.transform.position.z - zDisp;
-        newCamPos.x = player.transform.position.x - zDisp;
+        newCamPos.z = player.transform.position.z - zDisp + Random.Range(-camShake, camShake);
+        newCamPos.x = player.transform.position.x - zDisp + Random.Range(-camShake, camShake);
 
         transform.position = Vector3.Lerp(transform.position, newCamPos, cameraSpeed * Time.deltaTime);
+
+        camShake = 0f;
     }
 }
