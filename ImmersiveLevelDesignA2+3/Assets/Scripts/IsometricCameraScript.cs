@@ -9,7 +9,7 @@ public class IsometricCameraScript : MonoBehaviour
     public float height;
     public float zDisp;
     [HideInInspector]
-    public float camShake;
+    public float camShake; // Camera shake magnitude is controlled by PlayerWeaponScript
 
     public float cameraSpeed = 1.0f;
     private Vector3 newCamPos;

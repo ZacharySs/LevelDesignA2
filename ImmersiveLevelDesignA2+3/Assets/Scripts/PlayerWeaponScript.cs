@@ -23,7 +23,8 @@ public class PlayerWeaponScript : MonoBehaviour
     bool isFiring = false;
 
     IsometricCameraScript isoCamScript;
-    float camShakeMagnitude;
+    public float camShakeMagnitude = 0.5f;
+    float camShakeMult = 1f;
 
     void Start()
     {
@@ -36,40 +37,48 @@ public class PlayerWeaponScript : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             FireProjectile();
+            if (!isFiring)
+                StartFiringAudio();
         }
 
-        if (Input.GetMouseButtonDown(0) && !isFiring)
-        {
-            isFiring = true;
-            gunAudio.Stop();
-            gunAudio.PlayOneShot(gunSounds[0], 1f);
-            gunAudio.PlayOneShot(gunSounds[1], 1f);
-        }
         if (Input.GetMouseButtonUp(0) && isFiring)
         {
             gunAudio.PlayOneShot(gunSounds[2], 0.8f);
-            StartCoroutine(StopFireDelay());
+            StartCoroutine(StopFiringAudio());
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             weaponNum = 0;
+            gunAudio.volume = 0.25f;
+            camShakeMult = 1f;
         }
         if (Input.GetKeyDown(KeyCode.Alpha2) && hasMP5)
         {
             weaponNum = 1;
+            gunAudio.volume = 0.4f;
+            camShakeMult = 2f;
         }
         if (Input.GetKeyDown(KeyCode.Alpha3) && hasM4)
         {
             weaponNum = 2;
+            gunAudio.volume = 0.65f;
+            camShakeMult = 3f;
         }
     }
 
-    IEnumerator StopFireDelay()
+    IEnumerator StopFiringAudio()
     {
-        yield return new WaitForSeconds(0.3f);
-        isFiring = false;
+        yield return new WaitForSeconds(0.2f);
         gunAudio.Stop();
+        isFiring = false;
+    }
+    void StartFiringAudio()
+    {
+        isFiring = true;
+        gunAudio.Stop();
+        gunAudio.PlayOneShot(gunSounds[0], 1f);
+        gunAudio.PlayOneShot(gunSounds[1], 1f);
     }
 
     void FireProjectile()
@@ -96,17 +105,14 @@ public class PlayerWeaponScript : MonoBehaviour
             if (weaponNum == 0)
             {
                 newWeaponSpread = Random.Range(-spreadSingle, spreadSingle);
-                camShakeMagnitude = 1f;
             }
             else if (weaponNum == 1)
             {
                 newWeaponSpread = Random.Range(-spreadMP5, spreadMP5);
-                camShakeMagnitude = 2f;
             }
             else if (weaponNum == 2)
             {
                 newWeaponSpread = Random.Range(-spreadM4, spreadM4);
-                camShakeMagnitude = 3f;
             }
 
             fireLocation.transform.eulerAngles = new Vector3(fireLocation.transform.eulerAngles.x,
@@ -121,7 +127,7 @@ public class PlayerWeaponScript : MonoBehaviour
                 fireTimer = Time.time + fireTime;
             }
 
-            isoCamScript.camShake = camShakeMagnitude;
+            isoCamScript.camShake = camShakeMagnitude * camShakeMult;
         }
     }
 

@@ -17,16 +17,52 @@ public class ProjectileScript : MonoBehaviour
         Destroy(this.gameObject, lifeTime);
     }
 
-    void Update()
+    private void FixedUpdate()
     {
         Movement();
     }
 
     void Movement()
     {
-        transform.position += Time.deltaTime * speed * transform.forward;
-    }
+        if (Physics.Raycast(transform.position, transform.forward, out RaycastHit rayHit, Time.fixedDeltaTime * (speed + 3)))
+        {
+            if (rayHit.transform.tag == "Enemy")
+            {
+                rayHit.transform.GetComponent<PatrollingEnemyScript>().takeDamage(damage);
+                if (hitEffect)
+                    Instantiate(hitEffect, transform.position, transform.rotation);
+                Destroy(this.gameObject);
+            }
+            else if (rayHit.transform.tag == "Elevator")
+            {
+                if (hitEffect)
+                    Instantiate(hitEffect, transform.position, transform.rotation);
+                Destroy(this.gameObject);
+            }
+            else if (rayHit.transform.tag == "Player")
+            {
+                Destroy(this.gameObject);
+            }
+            else
+            {
+                if (hitEffect)
+                    Instantiate(hitEffect, transform.position, transform.rotation);
+                if (rayHit.transform.GetComponent<DestroyableEnviroScript>())
+                {
+                    rayHit.transform.GetComponent<DestroyableEnviroScript>().takeDamage(damage);
+                }
+                else
+                {
+                    Destroy(rayHit.transform.gameObject);
+                }
+                Destroy(this.gameObject);
+            }
 
+            Debug.Log(rayHit.transform.gameObject.name);
+        }
+        transform.position += Time.fixedDeltaTime * speed * transform.forward;
+    }
+    /*
     private void OnTriggerEnter(Collider otherObject)
     {
         if (otherObject.tag == "Enemy")
@@ -43,4 +79,5 @@ public class ProjectileScript : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+    */
 }

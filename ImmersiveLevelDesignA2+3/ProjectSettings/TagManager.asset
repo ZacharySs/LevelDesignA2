@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - MP5Pickup
   - M4Pickup
+  - Elevator
   layers:
   - Default
   - TransparentFX

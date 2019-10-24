@@ -10896,7 +10896,7 @@ GameObject:
   - component: {fileID: 6053967100722274106}
   - component: {fileID: 1401760765}
   - component: {fileID: 6053967101587027139}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: L2_SingleDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
