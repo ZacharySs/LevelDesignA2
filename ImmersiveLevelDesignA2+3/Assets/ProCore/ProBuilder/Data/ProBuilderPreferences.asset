@@ -25,6 +25,7 @@ MonoBehaviour:
   - pb_GIWorkflowMode
   - pbMirrorObjectScale
   - pbEdgeSubdivisions
+  - pbDragSelectMode
   m_Float_keys:
   - pbEditorScroll.x
   - pbEditorScroll.y
@@ -36,7 +37,7 @@ MonoBehaviour:
   m_Color_keys: []
   m_Material_keys: []
   m_Bool_values: 0100010000
-  m_Int_values: 000000000000000000000000000000000900000001000000
+  m_Int_values: 00000000000000000000000000000000090000000100000002000000
   m_Float_values:
   - 0
   - 91

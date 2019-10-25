@@ -6,23 +6,45 @@ public class HallwayDoorScript : MonoBehaviour
 {
     Animator animator;
 
+    LockLightScript lockLightScript;
+
+    public bool isLocked;
+
     void Start()
     {
         animator = GetComponent<Animator>();
+
+        lockLightScript = GetComponentInChildren<LockLightScript>();
+
+        lockLightScript.ChangeDoorLock(isLocked);
+
+    }
+
+    public void ChangeDoorLock()
+    {
+        isLocked = !isLocked;
+        lockLightScript.ChangeDoorLock(isLocked);
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player" || other.tag == "Enemy")
+        if (!isLocked)
         {
-            animator.SetTrigger("CycleHallwayDoor");
+            if (other.tag == "Player" || other.tag == "Enemy")
+            {
+                animator.SetTrigger("CycleHallwayDoor");
+            }
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Player" || other.tag == "Enemy")
+        if (!isLocked)
         {
-            animator.SetTrigger("CycleHallwayDoor");
+            if (other.tag == "Player" || other.tag == "Enemy")
+            {
+                animator.SetTrigger("CycleHallwayDoor");
+            }
         }
     }
 }
