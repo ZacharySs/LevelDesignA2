@@ -79,7 +79,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3854876014605473009}
   - component: {fileID: 3854876014605473008}
-  - component: {fileID: 614402256294603296}
   - component: {fileID: 6431954784303164334}
   m_Layer: 0
   m_Name: AKPickup
@@ -117,22 +116,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1.5, z: 1.5}
   m_Center: {x: 0, y: 0.5, z: 0}
---- !u!111 &614402256294603296
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3854876014605473011}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: b705fdb37740df44bae33e4fc9eb5b97, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: b705fdb37740df44bae33e4fc9eb5b97, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!95 &6431954784303164334
 Animator:
   serializedVersion: 3

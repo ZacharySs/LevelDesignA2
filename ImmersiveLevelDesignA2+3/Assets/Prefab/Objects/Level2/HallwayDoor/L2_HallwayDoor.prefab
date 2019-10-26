@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2028205801056212138}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.25, z: 0}
+  m_LocalPosition: {x: -0.00000011920929, y: -0.9999999, z: -0.0033744574}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6415757106201913576}
@@ -41,9 +41,9 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 0.28235295, g: 0.41568628, b: 0.7490196, a: 1}
-  m_Intensity: 2
-  m_Range: 1.5
+  m_Color: {r: 0.5254902, g: 0.6509804, b: 0.74509805, a: 1}
+  m_Intensity: 0.75
+  m_Range: 3
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -64,7 +64,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
@@ -1291,6 +1291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  sparksEffect: {fileID: 0}
 --- !u!65 &5945372864111417434
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5867,6 +5868,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  sparksEffect: {fileID: 0}
 --- !u!64 &7561800372384349525
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -25086,6 +25088,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 75
+  sparksEffect: {fileID: 0}
 --- !u!1 &6415757106972250918
 GameObject:
   m_ObjectHideFlags: 0
@@ -29416,6 +29419,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 75
+  sparksEffect: {fileID: 1000011945391522, guid: 78b71003e8b357d4bbf89c8b5e5e4f0e,
+    type: 3}
 --- !u!1 &6415757107687399341
 GameObject:
   m_ObjectHideFlags: 0
@@ -34367,6 +34372,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  sparksEffect: {fileID: 0}
 --- !u!64 &5194719999926607156
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -34406,7 +34412,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8189223975496872885}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.75, z: 0}
+  m_LocalPosition: {x: 0.00000023841858, y: 1.5000002, z: -0.0033744574}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6415757106201913576}
@@ -34422,9 +34428,9 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 0.28235295, g: 0.41568628, b: 0.7490196, a: 1}
-  m_Intensity: 2
-  m_Range: 1.5
+  m_Color: {r: 0.5254902, g: 0.6509804, b: 0.74509805, a: 1}
+  m_Intensity: 0.75
+  m_Range: 3
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -34445,7 +34451,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
@@ -35428,6 +35434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  sparksEffect: {fileID: 0}
 --- !u!65 &3874861314286633599
 BoxCollider:
   m_ObjectHideFlags: 0

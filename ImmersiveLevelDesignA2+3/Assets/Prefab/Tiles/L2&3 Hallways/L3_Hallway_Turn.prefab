@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!64 &3448809699241483019
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645680411646492460}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 0}
 --- !u!1 &941378019166404559
 GameObject:
   m_ObjectHideFlags: 0
@@ -13424,6 +13438,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 0}
+--- !u!64 &8722835251824645359
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6618510836550085443}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 0}
 --- !u!1 &7907788479257363755
 GameObject:
   m_ObjectHideFlags: 0
@@ -14405,6 +14433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  sparksEffect: {fileID: 0}
 --- !u!65 &1459746386395560474
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15399,6 +15428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  sparksEffect: {fileID: 0}
 --- !u!65 &6769170703388341409
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15494,16 +15524,17 @@ PrefabInstance:
       propertyPath: m_selectedTriangles.Array.size
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4635264567215796686, guid: 2577df095b034d14ab33b7c2f6a98b2d,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2577df095b034d14ab33b7c2f6a98b2d, type: 3}
 --- !u!4 &6618510836550085445 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4635264567215796685, guid: 2577df095b034d14ab33b7c2f6a98b2d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1984513049548954248}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6618510836550085443 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4635264567215796683, guid: 2577df095b034d14ab33b7c2f6a98b2d,
     type: 3}
   m_PrefabInstance: {fileID: 1984513049548954248}
   m_PrefabAsset: {fileID: 0}
@@ -15574,13 +15605,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7707233007188347125, guid: a27fe1a48c92739408246f40372cb64f,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1747057981789030009, guid: a27fe1a48c92739408246f40372cb64f, type: 3}
+    - {fileID: 6126893522479184581, guid: a27fe1a48c92739408246f40372cb64f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a27fe1a48c92739408246f40372cb64f, type: 3}
+--- !u!1 &645680411646492460 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7707233007188347112, guid: a27fe1a48c92739408246f40372cb64f,
+    type: 3}
+  m_PrefabInstance: {fileID: 7061782187451709380}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &645680411646492470 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7707233007188347122, guid: a27fe1a48c92739408246f40372cb64f,

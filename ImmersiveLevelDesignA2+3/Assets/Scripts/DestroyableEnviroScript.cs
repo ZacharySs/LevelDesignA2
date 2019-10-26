@@ -9,19 +9,15 @@ public class DestroyableEnviroScript : MonoBehaviour
     Vector3 initialPos;
     float damageShakeMagnitude = 0.2f;
 
-    [HideInInspector]
-    public GameObject destroyEffect;
+    public GameObject sparksEffect;
 
     // If this script is attached to a Hallway Door
     HallwayDoorScript hallwayDoorScript;
+    GameObject lockLight;
 
     void Start()
     {
         initialPos = transform.position;
-
-        destroyEffect = GameObject.Find("GameManager").GetComponent<GameManagerScript>().tileDestructionEffect;
-
-        StartCoroutine(HealthCheckCoroutine());
 
         if (GetComponentInParent<HallwayDoorScript>())
         {
@@ -31,19 +27,10 @@ public class DestroyableEnviroScript : MonoBehaviour
         {
             hallwayDoorScript = null;
         }
-    }
 
-    IEnumerator HealthCheckCoroutine()
-    {
-        while (true)
+        if (GetComponentInChildren<LockLightScript>())
         {
-            if (health <= 0)
-            {
-                Instantiate(destroyEffect, transform.position, transform.rotation);
-                Destroy(this.gameObject);
-            }
-
-            yield return new WaitForSeconds(0.0333f);
+            lockLight = GetComponentInChildren<LockLightScript>().gameObject;
         }
     }
 
@@ -63,6 +50,16 @@ public class DestroyableEnviroScript : MonoBehaviour
         if (hallwayDoorScript && !isDamaged)
         {
             hallwayDoorScript.StopDoorAnim();
+
+            if (lockLight)
+            {
+                Vector3 lockLightEuler = lockLight.transform.rotation.eulerAngles;
+
+                Instantiate(sparksEffect, lockLight.transform.position, Quaternion.Euler(lockLightEuler.x, lockLightEuler.y - 90, lockLightEuler.z), lockLight.transform);
+                Instantiate(sparksEffect, lockLight.transform.position + (Vector3.forward * 0.5f), Quaternion.Euler(lockLightEuler.x, lockLightEuler.y + 90, lockLightEuler.z), lockLight.transform);
+                Debug.Log("Sparks Instantiated.");
+            }
+
             isDamaged = true;
         }
 

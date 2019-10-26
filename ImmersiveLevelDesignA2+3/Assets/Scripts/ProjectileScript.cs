@@ -11,6 +11,7 @@ public class ProjectileScript : MonoBehaviour
 
     //Effects
     public GameObject hitEffect;
+    public GameObject destroyEffect;
 
     private void Start()
     {
@@ -29,8 +30,9 @@ public class ProjectileScript : MonoBehaviour
             if (rayHit.transform.tag == "Enemy")
             {
                 rayHit.transform.GetComponent<PatrollingEnemyScript>().takeDamage(damage);
-                if (hitEffect)
-                    Instantiate(hitEffect, transform.position, transform.rotation);
+                if (hitEffect != null)
+                    Instantiate(hitEffect, rayHit.point, transform.rotation);
+
                 Destroy(this.gameObject);
             }
             else if (rayHit.transform.tag == "Player")
@@ -39,11 +41,18 @@ public class ProjectileScript : MonoBehaviour
             }
             else
             {
-                if (hitEffect)
-                    Instantiate(hitEffect, transform.position, transform.rotation);
+                if (hitEffect != null)
+                    Instantiate(hitEffect, rayHit.point, transform.rotation);
+
                 if (rayHit.transform.GetComponent<DestroyableEnviroScript>())
                 {
                     rayHit.transform.GetComponent<DestroyableEnviroScript>().takeDamage(damage);
+                    if (rayHit.transform.GetComponent<DestroyableEnviroScript>().health <= 0)
+                    {
+                        Destroy(rayHit.transform.gameObject);
+                        Instantiate(destroyEffect, rayHit.point, rayHit.transform.rotation);
+                        Debug.Log("Explosion!");
+                    }
                 }
                 else
                 {

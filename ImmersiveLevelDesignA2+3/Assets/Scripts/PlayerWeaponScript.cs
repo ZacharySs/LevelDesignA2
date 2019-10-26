@@ -171,8 +171,6 @@ public class PlayerWeaponScript : MonoBehaviour
             weaponText.rectTransform.rotation = Quaternion.Euler(weaponTextRot);
             weaponText.fontSize = weaponTextFontSize;
             weaponText.text = "AK-74";
-
-            Debug.Log(fireLocations.Length);
         }
         else if (selectedWeapon == 2)
         {
