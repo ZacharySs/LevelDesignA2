@@ -5,17 +5,32 @@ using UnityEngine;
 public class DestroyableEnviroScript : MonoBehaviour
 {
     public float health = 10.0f;
+    bool isDamaged = false;
     Vector3 initialPos;
     float damageShakeMagnitude = 0.2f;
 
-    Animation anim;
+    [HideInInspector]
+    public GameObject destroyEffect;
+
+    // If this script is attached to a Hallway Door
+    HallwayDoorScript hallwayDoorScript;
 
     void Start()
     {
         initialPos = transform.position;
-        if (GetComponent<Animation>())
-            anim = GetComponent<Animation>();
+
+        destroyEffect = GameObject.Find("GameManager").GetComponent<GameManagerScript>().tileDestructionEffect;
+
         StartCoroutine(HealthCheckCoroutine());
+
+        if (GetComponentInParent<HallwayDoorScript>())
+        {
+            hallwayDoorScript = GetComponentInParent<HallwayDoorScript>();
+        }
+        else
+        {
+            hallwayDoorScript = null;
+        }
     }
 
     IEnumerator HealthCheckCoroutine()
@@ -24,11 +39,8 @@ public class DestroyableEnviroScript : MonoBehaviour
         {
             if (health <= 0)
             {
+                Instantiate(destroyEffect, transform.position, transform.rotation);
                 Destroy(this.gameObject);
-            }
-            else
-            {
-                //transform.position = initialPos;
             }
 
             yield return new WaitForSeconds(0.0333f);
@@ -47,6 +59,12 @@ public class DestroyableEnviroScript : MonoBehaviour
     public void takeDamage(float thisDamage)
     {
         health -= thisDamage;
+
+        if (hallwayDoorScript && !isDamaged)
+        {
+            hallwayDoorScript.StopDoorAnim();
+            isDamaged = true;
+        }
 
         StartCoroutine(DamageCoroutine());
 

@@ -5,9 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
-  - MP5Pickup
-  - M4Pickup
   - Elevator
+  - NavPlane
+  - AmmoPickup
+  - AKPickup
   layers:
   - Default
   - TransparentFX

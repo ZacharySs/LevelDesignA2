@@ -61,7 +61,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 0
@@ -1755,7 +1755,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 0
@@ -1824,7 +1824,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 0
@@ -8225,11 +8225,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4635264567215796686, guid: 2577df095b034d14ab33b7c2f6a98b2d,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 4635264567215796682, guid: 2577df095b034d14ab33b7c2f6a98b2d,
         type: 3}
       propertyPath: m_selectedFaces.Array.size
@@ -8244,6 +8239,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_selectedTriangles.Array.size
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4635264567215796686, guid: 2577df095b034d14ab33b7c2f6a98b2d,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2577df095b034d14ab33b7c2f6a98b2d, type: 3}
@@ -8320,11 +8320,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4635264567215796686, guid: 2577df095b034d14ab33b7c2f6a98b2d,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 4635264567215796682, guid: 2577df095b034d14ab33b7c2f6a98b2d,
         type: 3}
       propertyPath: m_selectedFaces.Array.size
@@ -8339,6 +8334,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_selectedTriangles.Array.size
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4635264567215796686, guid: 2577df095b034d14ab33b7c2f6a98b2d,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2577df095b034d14ab33b7c2f6a98b2d, type: 3}

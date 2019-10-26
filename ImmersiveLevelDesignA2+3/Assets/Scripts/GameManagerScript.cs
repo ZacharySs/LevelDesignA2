@@ -5,8 +5,60 @@ using UnityEngine.SceneManagement;
 
 public class GameManagerScript : MonoBehaviour
 {
+    public GameObject tileDestructionEffect;
+
+    GameObject hudCanvas;
+    GameObject pauseCanvas;
+
+    public Texture2D mouseTexture;
+
+
+    bool paused = true;
+
+    private void Start()
+    {
+        InitialiseVariables();
+
+        CyclePauseState();
+    }
+
+    void InitialiseVariables()
+    {
+        hudCanvas = GameObject.Find("HUDCanvas");
+        pauseCanvas = GameObject.Find("PauseCanvas");
+
+        Cursor.SetCursor(mouseTexture, new Vector2(mouseTexture.width / 2, mouseTexture.height / 2), CursorMode.Auto);
+    }
+
+    public void CyclePauseState()
+    {
+        paused = !paused;
+
+        if (paused)
+        {
+            //Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            Time.timeScale = 0f;
+            pauseCanvas.SetActive(true);
+            hudCanvas.SetActive(false);
+        }
+        else
+        {
+            //Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Confined;
+            Time.timeScale = 1f;
+            pauseCanvas.SetActive(false);
+            hudCanvas.SetActive(true);
+        }
+    }
+
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            CyclePauseState();
+        }
+
         if (Input.GetKeyDown(KeyCode.Alpha1) && Input.GetKey(KeyCode.LeftShift))
         {
             SceneManager.LoadScene("Level1");
@@ -19,6 +71,5 @@ public class GameManagerScript : MonoBehaviour
         {
             SceneManager.LoadScene("Level3");
         }
-
     }
 }

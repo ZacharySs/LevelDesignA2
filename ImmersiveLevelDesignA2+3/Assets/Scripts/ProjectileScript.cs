@@ -33,12 +33,6 @@ public class ProjectileScript : MonoBehaviour
                     Instantiate(hitEffect, transform.position, transform.rotation);
                 Destroy(this.gameObject);
             }
-            else if (rayHit.transform.tag == "Elevator")
-            {
-                if (hitEffect)
-                    Instantiate(hitEffect, transform.position, transform.rotation);
-                Destroy(this.gameObject);
-            }
             else if (rayHit.transform.tag == "Player")
             {
                 Destroy(this.gameObject);
@@ -53,12 +47,10 @@ public class ProjectileScript : MonoBehaviour
                 }
                 else
                 {
-                    Destroy(rayHit.transform.gameObject);
+                    Destroy(this.gameObject);
                 }
                 Destroy(this.gameObject);
             }
-
-            Debug.Log(rayHit.transform.gameObject.name);
         }
         transform.position += Time.fixedDeltaTime * speed * transform.forward;
     }

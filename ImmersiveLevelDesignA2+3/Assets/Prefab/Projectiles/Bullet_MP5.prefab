@@ -165,4 +165,5 @@ MonoBehaviour:
   speed: 30
   damage: 5
   lifeTime: 1.5
-  hitEffect: {fileID: 0}
+  hitEffect: {fileID: 2561179782580251521, guid: 49e094634252904448af1577d42a9782,
+    type: 3}
