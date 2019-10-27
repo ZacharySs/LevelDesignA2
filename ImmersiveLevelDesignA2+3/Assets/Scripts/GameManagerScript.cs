@@ -7,6 +7,11 @@ public class GameManagerScript : MonoBehaviour
 {
     public GameObject tileDestructionEffect;
 
+    public Material hardWallMat;
+    public Material softWallMat;
+    public Color hardWallLightColor;
+    public Color softWallLightColor;
+
     GameObject hudCanvas;
     GameObject pauseCanvas;
 

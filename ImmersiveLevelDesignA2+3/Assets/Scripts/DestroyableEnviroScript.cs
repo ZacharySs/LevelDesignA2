@@ -4,20 +4,25 @@ using UnityEngine;
 
 public class DestroyableEnviroScript : MonoBehaviour
 {
+    GameManagerScript gameManagerScript;
+
     public float health = 10.0f;
+    public bool isHardWall = true;
+
     bool isDamaged = false;
     Vector3 initialPos;
     float damageShakeMagnitude = 0.2f;
 
-    public GameObject sparksEffect;
-
     // If this script is attached to a Hallway Door
+    public GameObject sparksEffect;
     HallwayDoorScript hallwayDoorScript;
     GameObject lockLight;
 
     void Start()
     {
         initialPos = transform.position;
+
+        gameManagerScript = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
 
         if (GetComponentInParent<HallwayDoorScript>())
         {
@@ -32,6 +37,32 @@ public class DestroyableEnviroScript : MonoBehaviour
         {
             lockLight = GetComponentInChildren<LockLightScript>().gameObject;
         }
+
+        Renderer renderer = GetComponent<Renderer>();
+        Material[] sharedMaterials = renderer.sharedMaterials;
+        for (int i = 0; i < sharedMaterials.Length; i++)
+        {
+            if (sharedMaterials[i] == gameManagerScript.softWallMat || sharedMaterials[i] == gameManagerScript.hardWallMat)
+            {
+                if (isHardWall)
+                {
+                    renderer.materials[i].SetColor("_EmissionColor", gameManagerScript.hardWallMat.GetColor("_EmissionColor"));
+                }
+                else
+                {
+                    renderer.materials[i].SetColor("_EmissionColor", gameManagerScript.softWallMat.GetColor("_EmissionColor"));
+                }
+            }
+        }
+
+        Light[] wallLights = GetComponentsInChildren<Light>();
+        for (int i = 0; i < wallLights.Length; i++)
+        {
+            if (isHardWall)
+                wallLights[i].color = gameManagerScript.hardWallLightColor;
+            else
+                wallLights[i].color = gameManagerScript.softWallLightColor;
+        }
     }
 
     IEnumerator DamageCoroutine()
@@ -45,25 +76,28 @@ public class DestroyableEnviroScript : MonoBehaviour
 
     public void takeDamage(float thisDamage)
     {
-        health -= thisDamage;
-
-        if (hallwayDoorScript && !isDamaged)
+        if (!isHardWall)
         {
-            hallwayDoorScript.StopDoorAnim();
+            health -= thisDamage;
 
-            if (lockLight)
+            if (hallwayDoorScript && !isDamaged)
             {
-                Vector3 lockLightEuler = lockLight.transform.rotation.eulerAngles;
+                hallwayDoorScript.StopDoorAnim();
 
-                Instantiate(sparksEffect, lockLight.transform.position, Quaternion.Euler(lockLightEuler.x, lockLightEuler.y - 90, lockLightEuler.z), lockLight.transform);
-                Instantiate(sparksEffect, lockLight.transform.position + (Vector3.forward * 0.5f), Quaternion.Euler(lockLightEuler.x, lockLightEuler.y + 90, lockLightEuler.z), lockLight.transform);
-                Debug.Log("Sparks Instantiated.");
+                if (lockLight)
+                {
+                    Vector3 lockLightEuler = lockLight.transform.rotation.eulerAngles;
+
+                    Instantiate(sparksEffect, lockLight.transform.position, Quaternion.Euler(lockLightEuler.x, lockLightEuler.y - 90, lockLightEuler.z), lockLight.transform);
+                    Instantiate(sparksEffect, lockLight.transform.position + (Vector3.forward * 0.5f), Quaternion.Euler(lockLightEuler.x, lockLightEuler.y + 90, lockLightEuler.z), lockLight.transform);
+                    Debug.Log("Sparks Instantiated.");
+                }
+
+                isDamaged = true;
             }
 
-            isDamaged = true;
+            StartCoroutine(DamageCoroutine());
         }
-
-        StartCoroutine(DamageCoroutine());
 
         /*
         transform.position = new Vector3(transform.position.x + Mathf.Sign(Random.Range(-1, 1)) * damageShakeMagnitude,

@@ -325,6 +325,7 @@ public class PlayerWeaponScript : MonoBehaviour
         if (other.tag == "AmmoPickup")
         {
             ammo += 100;
+            UpdateAmmoCounter();
             Destroy(other.gameObject);
         }
     }
