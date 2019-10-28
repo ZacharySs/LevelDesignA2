@@ -13,9 +13,48 @@ public class ProjectileScript : MonoBehaviour
     public GameObject hitEffect;
     public GameObject destroyEffect;
 
+    [HideInInspector]
+    public GameObject fireLocationOrigin;
+
     private void Start()
     {
         Destroy(this.gameObject, lifeTime);
+
+        if (Physics.Raycast(transform.position, transform.forward, out RaycastHit rayHit, Time.fixedDeltaTime * (speed + 3)))
+        {
+            if (rayHit.transform.tag == "Enemy")
+            {
+                rayHit.transform.GetComponent<PatrollingEnemyScript>().takeDamage(damage);
+                if (hitEffect != null)
+                    Instantiate(hitEffect, rayHit.point, transform.rotation);
+
+                Destroy(this.gameObject);
+            }
+            else if (rayHit.transform.tag == "Player")
+            {
+            }
+            else
+            {
+                if (hitEffect != null)
+                    Instantiate(hitEffect, rayHit.point, transform.rotation);
+
+                if (rayHit.transform.GetComponent<DestroyableEnviroScript>())
+                {
+                    rayHit.transform.GetComponent<DestroyableEnviroScript>().takeDamage(damage);
+                    if (rayHit.transform.GetComponent<DestroyableEnviroScript>().health <= 0)
+                    {
+                        Destroy(rayHit.transform.gameObject);
+                        Instantiate(destroyEffect, rayHit.point, rayHit.transform.rotation);
+                        Debug.Log("Explosion!");
+                    }
+                }
+                else
+                {
+                    Destroy(this.gameObject);
+                }
+                Destroy(this.gameObject);
+            }
+        }
     }
 
     private void FixedUpdate()
@@ -37,7 +76,6 @@ public class ProjectileScript : MonoBehaviour
             }
             else if (rayHit.transform.tag == "Player")
             {
-                Destroy(this.gameObject);
             }
             else
             {

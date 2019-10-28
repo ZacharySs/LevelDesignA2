@@ -1291,7 +1291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
-  sparksEffect: {fileID: 0}
+  isHardWall: 1
 --- !u!65 &5945372864111417434
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5868,7 +5868,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  sparksEffect: {fileID: 0}
+  isHardWall: 1
 --- !u!64 &7561800372384349525
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -25074,7 +25074,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.50000083, y: 3.000001, z: 3}
-  m_Center: {x: -0.000000059604645, y: -0.00000047683716, z: 0}
+  m_Center: {x: 0, y: 0, z: -0.7}
 --- !u!114 &5603657998129642012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25088,7 +25088,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 75
-  sparksEffect: {fileID: 0}
+  isHardWall: 0
 --- !u!1 &6415757106972250918
 GameObject:
   m_ObjectHideFlags: 0
@@ -29419,8 +29419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 75
-  sparksEffect: {fileID: 1000011945391522, guid: 78b71003e8b357d4bbf89c8b5e5e4f0e,
-    type: 3}
+  isHardWall: 0
 --- !u!1 &6415757107687399341
 GameObject:
   m_ObjectHideFlags: 0
@@ -34372,7 +34371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  sparksEffect: {fileID: 0}
+  isHardWall: 1
 --- !u!64 &5194719999926607156
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -35434,7 +35433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
-  sparksEffect: {fileID: 0}
+  isHardWall: 1
 --- !u!65 &3874861314286633599
 BoxCollider:
   m_ObjectHideFlags: 0

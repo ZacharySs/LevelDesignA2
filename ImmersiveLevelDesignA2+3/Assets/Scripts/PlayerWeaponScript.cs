@@ -233,9 +233,11 @@ public class PlayerWeaponScript : MonoBehaviour
                                                          fireLocations[i].transform.eulerAngles.y + newWeaponSpread,
                                                          fireLocations[i].transform.eulerAngles.z);
 
-                    Instantiate(projectile, 
-                                fireLocations[i].transform.position + (fireLocations[i].transform.forward * 0.3f), 
-                                Quaternion.Euler(fireDirection));
+                    GameObject newProjectile = Instantiate(projectile,
+                                                            fireLocations[i].transform.position - fireLocations[i].transform.forward * 0.1f,
+                                                            Quaternion.Euler(fireDirection));
+
+                    newProjectile.GetComponent<ProjectileScript>().fireLocationOrigin = fireLocations[i];
 
                     ammo--;
                 }
@@ -250,9 +252,11 @@ public class PlayerWeaponScript : MonoBehaviour
                                                          fireLocations[i].transform.eulerAngles.y + newWeaponSpread,
                                                          fireLocations[i].transform.eulerAngles.z);
 
-                    Instantiate(projectile,
-                                fireLocations[i].transform.position + (fireLocations[i].transform.forward * 0.3f),
-                                Quaternion.Euler(fireDirection));
+                    GameObject newProjectile = Instantiate(projectile,
+                                                            fireLocations[i].transform.position - fireLocations[i].transform.forward * 0.1f,
+                                                            Quaternion.Euler(fireDirection));
+
+                    newProjectile.GetComponent<ProjectileScript>().fireLocationOrigin = fireLocations[i];
 
                     ammo--;
                 }
@@ -267,9 +271,12 @@ public class PlayerWeaponScript : MonoBehaviour
                                                          fireLocations[i].transform.eulerAngles.y + newWeaponSpread,
                                                          fireLocations[i].transform.eulerAngles.z);
 
-                    Instantiate(projectile,
-                                fireLocations[i].transform.position + (fireLocations[i].transform.forward * 0.3f),
-                                Quaternion.Euler(fireDirection));
+
+                    GameObject newProjectile = Instantiate(projectile,
+                                                            fireLocations[i].transform.position - fireLocations[i].transform.forward * 0.1f,
+                                                            Quaternion.Euler(fireDirection));
+
+                    newProjectile.GetComponent<ProjectileScript>().fireLocationOrigin = fireLocations[i];
 
                     ammo--;
                 }

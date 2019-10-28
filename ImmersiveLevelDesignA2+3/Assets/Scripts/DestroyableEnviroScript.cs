@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class DestroyableEnviroScript : MonoBehaviour
@@ -14,15 +15,18 @@ public class DestroyableEnviroScript : MonoBehaviour
     float damageShakeMagnitude = 0.2f;
 
     // If this script is attached to a Hallway Door
-    public GameObject sparksEffect;
+    GameObject sparksEffect;
     HallwayDoorScript hallwayDoorScript;
     GameObject lockLight;
+
+    Color baseEmissiveColor;
 
     void Start()
     {
         initialPos = transform.position;
 
         gameManagerScript = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
+        sparksEffect = gameManagerScript.lockLightSparksEffect;
 
         if (GetComponentInParent<HallwayDoorScript>())
         {
@@ -38,30 +42,132 @@ public class DestroyableEnviroScript : MonoBehaviour
             lockLight = GetComponentInChildren<LockLightScript>().gameObject;
         }
 
-        Renderer renderer = GetComponent<Renderer>();
-        Material[] sharedMaterials = renderer.sharedMaterials;
-        for (int i = 0; i < sharedMaterials.Length; i++)
+        StartCoroutine(SetColorsCoroutine());
+    }
+
+
+
+    IEnumerator SetColorsCoroutine()
+    {
+        if (!isHardWall)
         {
-            if (sharedMaterials[i] == gameManagerScript.softWallMat || sharedMaterials[i] == gameManagerScript.hardWallMat)
+            if (SceneManager.GetActiveScene().name == "Level2")
+                baseEmissiveColor = gameManagerScript.L2_softWallEmissionColor;
+            else if (SceneManager.GetActiveScene().name == "Level3")
+                baseEmissiveColor = gameManagerScript.L3_softWallEmissionColor;
+
+            StartCoroutine(UpdateStrobingColor());
+        }
+        else
+        {
+            if (SceneManager.GetActiveScene().name == "Level2")
+                baseEmissiveColor = gameManagerScript.L2_hardWallEmissionColor;
+            else if (SceneManager.GetActiveScene().name == "Level3")
+                baseEmissiveColor = gameManagerScript.L3_hardWallEmissionColor;
+
+
+            Renderer[] renderers = GetComponentsInChildren<Renderer>();
+            foreach (Renderer renderer in renderers)
             {
-                if (isHardWall)
+                if (!renderer.gameObject.GetComponent<LockLightScript>()) // Only set child renderers if they are not LockLights. 
                 {
-                    renderer.materials[i].SetColor("_EmissionColor", gameManagerScript.hardWallMat.GetColor("_EmissionColor"));
+                    Material[] sharedMaterials = renderer.sharedMaterials;
+                    for (int i = 0; i < sharedMaterials.Length; i++)
+                    {
+                        if (sharedMaterials[i].IsKeywordEnabled("_EMISSION"))
+                        {
+                            if (SceneManager.GetActiveScene().name == "Level2")
+                            {
+                                renderer.materials[i].SetColor("_EmissionColor", baseEmissiveColor);
+                            }
+                            else if (SceneManager.GetActiveScene().name == "Level3")
+                            {
+                                renderer.materials[i].SetColor("_EmissionColor", baseEmissiveColor);
+                            }
+                        }
+                    }
                 }
-                else
+                else // Makes sure the LockLight retains the emissive color it starts with, which prevents red LockLights from becoming something else.
                 {
-                    renderer.materials[i].SetColor("_EmissionColor", gameManagerScript.softWallMat.GetColor("_EmissionColor"));
+                    Material[] sharedMaterials = renderer.sharedMaterials;
+                    for (int i = 0; i < sharedMaterials.Length; i++)
+                    {
+                        if (sharedMaterials[i].IsKeywordEnabled("_EMISSION"))
+                        {
+                            baseEmissiveColor = renderer.materials[i].GetColor("_EmissionColor");
+                            renderer.materials[i].SetColor("_EmissionColor", baseEmissiveColor);
+                        }
+                    }
+                }
+            }
+
+
+            if (!GetComponentInChildren<LockLightScript>())
+            {
+                if (GetComponentInChildren<Light>())
+                {
+                    Light[] wallLights = GetComponentsInChildren<Light>();
+                    for (int i = 0; i < wallLights.Length; i++)
+                    {
+                        if (SceneManager.GetActiveScene().name == "Level2")
+                            wallLights[i].color = gameManagerScript.L2_hardWallLightColor;
+                        else if (SceneManager.GetActiveScene().name == "Level3")
+                            wallLights[i].color = gameManagerScript.L3_hardWallLightColor;
+                    }
                 }
             }
         }
 
-        Light[] wallLights = GetComponentsInChildren<Light>();
-        for (int i = 0; i < wallLights.Length; i++)
+        yield return null;
+
+    }
+
+    IEnumerator UpdateStrobingColor()
+    {
+        while (true)
         {
-            if (isHardWall)
-                wallLights[i].color = gameManagerScript.hardWallLightColor;
-            else
-                wallLights[i].color = gameManagerScript.softWallLightColor;
+            Renderer[] renderers = GetComponentsInChildren<Renderer>();
+            foreach (Renderer renderer in renderers)
+            {
+                Material[] sharedMaterials = renderer.sharedMaterials;
+                for (int i = 0; i < sharedMaterials.Length; i++)
+                {
+                    if (renderer.gameObject.GetComponent<LockLightScript>())
+                    {
+                        if (sharedMaterials[i].IsKeywordEnabled("_EMISSION"))
+                        {
+                            LockLightScript lockLightScript = GetComponentInChildren<LockLightScript>();
+                            if (lockLightScript.isLocked)
+                            {
+                                renderer.materials[i].SetColor("_EmissionColor", lockLightScript.lockLightMaterial[0].GetColor("_EmissionColor") * gameManagerScript.strobeColorIntensity);
+                            }
+                            else
+                            {
+                                renderer.materials[i].SetColor("_EmissionColor", lockLightScript.lockLightMaterial[1].GetColor("_EmissionColor") * gameManagerScript.strobeColorIntensity);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        if (sharedMaterials[i].IsKeywordEnabled("_EMISSION"))
+                        {
+                            renderer.materials[i].SetColor("_EmissionColor", baseEmissiveColor * gameManagerScript.strobeColorIntensity);
+                        }
+                    }
+                }
+
+                Light[] wallLights = GetComponentsInChildren<Light>();
+                for (int i = 0; i < wallLights.Length; i++)
+                {
+                    Color newLightColor = wallLights[i].color;
+
+                    newLightColor.a = gameManagerScript.strobeColorIntensity;
+
+                    wallLights[i].color = newLightColor;
+                }
+
+                yield return new WaitForSeconds(0.025f);
+            }
         }
     }
 
@@ -88,8 +194,9 @@ public class DestroyableEnviroScript : MonoBehaviour
                 {
                     Vector3 lockLightEuler = lockLight.transform.rotation.eulerAngles;
 
-                    Instantiate(sparksEffect, lockLight.transform.position, Quaternion.Euler(lockLightEuler.x, lockLightEuler.y - 90, lockLightEuler.z), lockLight.transform);
-                    Instantiate(sparksEffect, lockLight.transform.position + (Vector3.forward * 0.5f), Quaternion.Euler(lockLightEuler.x, lockLightEuler.y + 90, lockLightEuler.z), lockLight.transform);
+                    Instantiate(sparksEffect, lockLight.transform.position - (lockLight.transform.up * 0.1f), Quaternion.Euler(lockLightEuler.x, lockLightEuler.y - 90, lockLightEuler.z), lockLight.transform);
+
+                    Instantiate(sparksEffect, lockLight.transform.position + (lockLight.transform.up * 0.6f), Quaternion.Euler(lockLightEuler.x, lockLightEuler.y + 90, lockLightEuler.z), lockLight.transform);
                     Debug.Log("Sparks Instantiated.");
                 }
 
@@ -104,5 +211,19 @@ public class DestroyableEnviroScript : MonoBehaviour
                                  transform.position.y + Mathf.Sign(Random.Range(-1, 1)) * damageShakeMagnitude,
                                  transform.position.z + Mathf.Sign(Random.Range(-1, 1)) * damageShakeMagnitude);
         */
+    }
+
+    private void OnDrawGizmos()
+    {
+        if (isHardWall)
+        {
+            Gizmos.color = Color.blue;
+        }
+        else
+        {
+            Gizmos.color = Color.red;
+        }
+
+        Gizmos.DrawLine(transform.position, transform.position + Vector3.up * 5);
     }
 }

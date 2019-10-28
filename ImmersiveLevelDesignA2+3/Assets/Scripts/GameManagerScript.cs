@@ -7,10 +7,19 @@ public class GameManagerScript : MonoBehaviour
 {
     public GameObject tileDestructionEffect;
 
-    public Material hardWallMat;
-    public Material softWallMat;
-    public Color hardWallLightColor;
-    public Color softWallLightColor;
+    public Color L2_hardWallEmissionColor;
+    public Color L2_softWallEmissionColor;
+    public Color L3_hardWallEmissionColor;
+    public Color L3_softWallEmissionColor;
+
+    public Color L2_hardWallLightColor;
+    public Color L2_softWallLightColor;
+    public Color L3_hardWallLightColor;
+    public Color L3_softWallLightColor;
+
+    public float strobeColorIntensity = 1;
+
+    public GameObject lockLightSparksEffect;
 
     GameObject hudCanvas;
     GameObject pauseCanvas;
@@ -26,7 +35,6 @@ public class GameManagerScript : MonoBehaviour
 
         CyclePauseState();
     }
-
     void InitialiseVariables()
     {
         hudCanvas = GameObject.Find("HUDCanvas");

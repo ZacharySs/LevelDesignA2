@@ -5,6 +5,8 @@ using UnityEngine;
 public class LockLightScript : MonoBehaviour
 {
     public Material[] lockLightMaterial; //[0] is red light, [1] is blue light
+    [HideInInspector]
+    public bool isLocked = false; // Used in DestroyableEnviroScript to decide which lockLightMaterial to use.
     MeshRenderer meshRenderer;
     Light[] lockLights;
 
@@ -18,6 +20,7 @@ public class LockLightScript : MonoBehaviour
     {
         if (newLockState)
         {
+            isLocked = true;
             foreach (var lockLight in lockLights)
             {
                 lockLight.color = lockLightMaterial[0].GetColor("_EmissionColor");
@@ -29,6 +32,7 @@ public class LockLightScript : MonoBehaviour
         }
         else
         {
+            isLocked = false;
             foreach (var lockLight in lockLights)
             {
                 lockLight.color = lockLightMaterial[1].GetColor("_EmissionColor");
