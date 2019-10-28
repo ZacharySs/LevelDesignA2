@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1976537085}
   - component: {fileID: 1976537086}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: DetectionCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,7 +221,6 @@ MonoBehaviour:
   speed: 6
   stopDistance: 1
   pauseTimer: 0
-  currentTimer: 0
 --- !u!114 &3344784170199361484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,6 +235,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fieldOfViewAngle: 100
   playerInSight: 0
+  playerModel: {fileID: 0}
 --- !u!114 &4915648923300230416
 MonoBehaviour:
   m_ObjectHideFlags: 0
