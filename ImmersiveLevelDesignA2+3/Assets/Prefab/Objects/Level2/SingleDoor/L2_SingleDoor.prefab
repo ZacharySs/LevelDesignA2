@@ -9643,8 +9643,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lockLightMaterial:
-  - {fileID: 2100000, guid: 0849013e093a440bf9a5a4fc2fa20920, type: 2}
   - {fileID: 2100000, guid: 96cc97f4266f84df7a0c980204b0c356, type: 2}
+  - {fileID: 2100000, guid: 0849013e093a440bf9a5a4fc2fa20920, type: 2}
   isLocked: 0
 --- !u!1 &5137108798799182070
 GameObject:
@@ -9801,7 +9801,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6053967100722274109
 Transform:
@@ -9844,6 +9844,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 524f13e9528ddad4c8a67596578583c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isLocked: 0
 --- !u!95 &6053967101587027139
 Animator:
   serializedVersion: 3

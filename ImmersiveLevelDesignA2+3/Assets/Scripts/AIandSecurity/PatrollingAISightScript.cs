@@ -11,7 +11,9 @@ public class PatrollingAISightScript : MonoBehaviour
     private NavMeshAgent nav;
     private SphereCollider col;
     private GameObject player;
-    
+    [SerializeField]
+    private GameObject playerModel;
+
     private Renderer playerRend;
     private Color storedColor;
 
@@ -39,14 +41,18 @@ public class PatrollingAISightScript : MonoBehaviour
         Debug.Log(col);
 
         player = GameObject.FindGameObjectWithTag("Player");
-        playerRend = player.GetComponent<MeshRenderer>();
+        playerModel = GameObject.FindGameObjectWithTag("PlayerModel");
+        Debug.Log(player);
+        
+        Debug.Log(playerModel);
+        playerRend = playerModel.GetComponent<MeshRenderer>();
         storedColor = playerRend.material.GetColor("_Color");
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
         
         
     }
@@ -67,7 +73,7 @@ public class PatrollingAISightScript : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        if (other.gameObject == player)
+        if (other.gameObject == playerModel)
         {
             playerInSight = false;
             playerRend.material.SetColor("_Color", storedColor);
@@ -83,7 +89,7 @@ public class PatrollingAISightScript : MonoBehaviour
                 if (Physics.Raycast(transform.position + transform.up, direction.normalized, out hit, col.radius))
                 {
                     
-                    if (hit.collider.gameObject == player)
+                    if (hit.collider.gameObject == playerModel)
                     {
                         playerInSight = true;
                         playerRend.material.SetColor("_Color", Color.red);

@@ -17,6 +17,7 @@ public class DestroyableEnviroScript : MonoBehaviour
     // If this script is attached to a Hallway Door
     GameObject sparksEffect;
     HallwayDoorScript hallwayDoorScript;
+    SingleDoorScript singleDoorScript;
     GameObject lockLight;
 
     Color baseEmissiveColor;
@@ -29,13 +30,9 @@ public class DestroyableEnviroScript : MonoBehaviour
         sparksEffect = gameManagerScript.lockLightSparksEffect;
 
         if (GetComponentInParent<HallwayDoorScript>())
-        {
             hallwayDoorScript = GetComponentInParent<HallwayDoorScript>();
-        }
-        else
-        {
-            hallwayDoorScript = null;
-        }
+        else if (GetComponentInParent<SingleDoorScript>())
+            singleDoorScript = GetComponentInParent<SingleDoorScript>();
 
         if (GetComponentInChildren<LockLightScript>())
         {
@@ -186,18 +183,36 @@ public class DestroyableEnviroScript : MonoBehaviour
         {
             health -= thisDamage;
 
-            if (hallwayDoorScript && !isDamaged)
+            if (!isDamaged)
             {
-                hallwayDoorScript.StopDoorAnim();
-
-                if (lockLight)
+                if (hallwayDoorScript)
                 {
-                    Vector3 lockLightEuler = lockLight.transform.rotation.eulerAngles;
 
-                    Instantiate(sparksEffect, lockLight.transform.position - (lockLight.transform.up * 0.1f), Quaternion.Euler(lockLightEuler.x, lockLightEuler.y - 90, lockLightEuler.z), lockLight.transform);
+                    hallwayDoorScript.StopDoorAnim();
 
-                    Instantiate(sparksEffect, lockLight.transform.position + (lockLight.transform.up * 0.6f), Quaternion.Euler(lockLightEuler.x, lockLightEuler.y + 90, lockLightEuler.z), lockLight.transform);
-                    Debug.Log("Sparks Instantiated.");
+                    if (lockLight)
+                    {
+                        Vector3 lockLightEuler = lockLight.transform.rotation.eulerAngles;
+
+                        Instantiate(sparksEffect, lockLight.transform.position - (lockLight.transform.up * 0.1f), Quaternion.Euler(lockLightEuler.x, lockLightEuler.y - 90, lockLightEuler.z), lockLight.transform);
+
+                        Instantiate(sparksEffect, lockLight.transform.position + (lockLight.transform.up * 0.6f), Quaternion.Euler(lockLightEuler.x, lockLightEuler.y + 90, lockLightEuler.z), lockLight.transform);
+                        Debug.Log("Sparks Instantiated.");
+                    }
+                }
+                else if (singleDoorScript)
+                {
+                    singleDoorScript.StopDoorAnim();
+
+                    if (lockLight)
+                    {
+                        Vector3 lockLightEuler = lockLight.transform.rotation.eulerAngles;
+
+                        Instantiate(sparksEffect, lockLight.transform.position - (lockLight.transform.up * 0.0f), Quaternion.Euler(lockLightEuler.x - 90, lockLightEuler.y, lockLightEuler.z), lockLight.transform);
+
+                        Instantiate(sparksEffect, lockLight.transform.position + (lockLight.transform.up * 0.1f), Quaternion.Euler(lockLightEuler.x + 90, lockLightEuler.y, lockLightEuler.z), lockLight.transform);
+                        Debug.Log("Sparks Instantiated.");
+                    }
                 }
 
                 isDamaged = true;

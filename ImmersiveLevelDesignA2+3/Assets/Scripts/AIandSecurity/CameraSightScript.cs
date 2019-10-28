@@ -7,7 +7,7 @@ public class CameraSightScript : MonoBehaviour
 
     public bool playerInSight;
 
-    private GameObject player;
+    private GameObject playerModel;
     private Renderer playerRend;
     private Color storedColor;
 
@@ -19,8 +19,8 @@ public class CameraSightScript : MonoBehaviour
 
     void Awake()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        playerRend = player.GetComponent<MeshRenderer>();
+        playerModel = GameObject.FindGameObjectWithTag("PlayerModel");
+        playerRend = playerModel.GetComponent<MeshRenderer>();
         storedColor = playerRend.material.GetColor("_Color");
     }
     // Start is called before the first frame update
@@ -37,7 +37,7 @@ public class CameraSightScript : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        if (other.gameObject == player)
+        if (other.gameObject == playerModel)
         {
             playerInSight = false;
             playerRend.material.SetColor("_Color", storedColor);
@@ -46,7 +46,7 @@ public class CameraSightScript : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == player)
+        if (other.gameObject == playerModel)
         {
             playerInSight = true;
             playerRend.material.SetColor("_Color", Color.red);

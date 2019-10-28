@@ -22,7 +22,7 @@ public class PlayerWeaponScript : MonoBehaviour
 
     AudioSource gunAudio;
     public AudioClip[] gunSounds;
-    bool isFiring = false;
+    public bool isFiring = false;
 
     IsometricCameraScript isoCamScript;
     Animator isoCamAnimator;
