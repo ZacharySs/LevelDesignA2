@@ -6,12 +6,17 @@ public class TurretSightScript : MonoBehaviour
 {
     public bool playerInSight;
 
-    private GameObject player;
-    private BoxCollider col;
+    [SerializeField]
+    private GameObject playerModel; 
     private Renderer playerRend;
     private Color storedColor;
+
     private LineRenderer lineRenderer;
-    
+    private BoxCollider col;
+
+
+
+
     // HOW TO USE //
     // Drag and Drop the turret into the world
     // Editing the length of the Box Collider will also
@@ -21,12 +26,13 @@ public class TurretSightScript : MonoBehaviour
 
     void Awake()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        playerRend = player.GetComponent<MeshRenderer>();
+        playerModel = GameObject.FindGameObjectWithTag("PlayerModel");
+        playerRend = playerModel.GetComponent<MeshRenderer>();
         storedColor = playerRend.material.GetColor("_Color");
-        col = GetComponent<BoxCollider>();
 
+        col = GetComponent<BoxCollider>();
         lineRenderer = this.GetComponent<LineRenderer>();
+        
     }
 
     // Start is called before the first frame update
@@ -40,12 +46,12 @@ public class TurretSightScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     void OnTriggerExit(Collider other)
     {
-        if (other.gameObject == player)
+        if (other.gameObject == playerModel)
         {
             playerInSight = false;
             playerRend.material.SetColor("_Color", storedColor);
@@ -54,11 +60,13 @@ public class TurretSightScript : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == player)
+        if (other.gameObject == playerModel)
         {
             playerInSight = true;
             playerRend.material.SetColor("_Color", Color.red);
 
         }    
     }
+
+    
 }
