@@ -10,6 +10,10 @@ public class HallwayDoorScript : MonoBehaviour
 
     public bool isLocked;
 
+    public bool isConsoleUnlockable;
+
+    public bool isKeycardUnlockable;
+
     DestroyableEnviroScript doorLScript;
     float doorLInitialHealth;
     DestroyableEnviroScript doorRScript;
@@ -66,5 +70,31 @@ public class HallwayDoorScript : MonoBehaviour
         {
             animator.SetTrigger("CycleHallwayDoor");
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        if (isLocked)
+        {
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireCube(transform.position, new Vector3(4, 4, 4));
+        }
+        if (isConsoleUnlockable)
+        {
+
+            Gizmos.color = new Vector4(1f, 0.5f, 0f, 1f);
+            Gizmos.DrawWireCube(transform.position, new Vector3(4, 4, 4));
+        }
+        if (isKeycardUnlockable)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireCube(transform.position, new Vector3(4, 4, 4));
+        }
+        if (!isLocked)
+        {
+            Gizmos.color = Color.cyan;
+            Gizmos.DrawWireSphere(transform.position, 4f);
+        }
+
     }
 }

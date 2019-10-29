@@ -9,6 +9,8 @@ TagManager:
   - NavPlane
   - AmmoPickup
   - AKPickup
+  - PlayerModel
+  - ElevatorLevelTrigger
   layers:
   - Default
   - TransparentFX
