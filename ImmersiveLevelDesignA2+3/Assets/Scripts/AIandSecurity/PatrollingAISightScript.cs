@@ -73,7 +73,7 @@ public class PatrollingAISightScript : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        if (other.gameObject == playerModel)
+        if (other.gameObject == player)
         {
             playerInSight = false;
             playerRend.material.SetColor("_Color", storedColor);
@@ -86,10 +86,10 @@ public class PatrollingAISightScript : MonoBehaviour
             {
                 RaycastHit hit;
 
-                if (Physics.Raycast(transform.position + transform.up, direction.normalized, out hit, col.radius))
+                if (Physics.Raycast(transform.position, direction.normalized, out hit, col.radius))
                 {
                     
-                    if (hit.collider.gameObject == playerModel)
+                    if (hit.collider.gameObject == player)
                     {
                         playerInSight = true;
                         playerRend.material.SetColor("_Color", Color.red);
@@ -99,4 +99,5 @@ public class PatrollingAISightScript : MonoBehaviour
             }
         }
     }
+
 }

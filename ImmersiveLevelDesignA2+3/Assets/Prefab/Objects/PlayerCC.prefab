@@ -127,6 +127,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 00dd0ab01200d8b4695337c2b27217dc, type: 3}
   - {fileID: 8300000, guid: 1982543b015c4014689c514203ccd5c1, type: 3}
   - {fileID: 8300000, guid: bd497de026e131e47af652d40c057a55, type: 3}
+  isFiring: 0
   camShakeMagnitude: 0.5
 --- !u!114 &353454205276345684
 MonoBehaviour:
@@ -285,7 +286,7 @@ GameObject:
   - component: {fileID: 5792684202793348743}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: PlayerModel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -457,11 +458,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MuzzleFlashX Variant
       objectReference: {fileID: 0}
-    - target: {fileID: 1497385661442166618, guid: e7659294e06b0ad40a8462410c998b53,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1499345292205261440, guid: e7659294e06b0ad40a8462410c998b53,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -614,11 +610,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MuzzleFlashX Variant
-      objectReference: {fileID: 0}
-    - target: {fileID: 1497385661442166618, guid: e7659294e06b0ad40a8462410c998b53,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1499345292205261440, guid: e7659294e06b0ad40a8462410c998b53,
         type: 3}
@@ -835,11 +826,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MuzzleFlashX Variant
-      objectReference: {fileID: 0}
-    - target: {fileID: 1497385661442166618, guid: e7659294e06b0ad40a8462410c998b53,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1499345292205261440, guid: e7659294e06b0ad40a8462410c998b53,
         type: 3}
