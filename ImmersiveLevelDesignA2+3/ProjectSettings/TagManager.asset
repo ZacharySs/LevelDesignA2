@@ -11,6 +11,7 @@ TagManager:
   - AKPickup
   - PlayerModel
   - ElevatorLevelTrigger
+  - KeycardPickup
   layers:
   - Default
   - TransparentFX

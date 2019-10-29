@@ -25,4 +25,10 @@ public class ElevatorScript : MonoBehaviour
             elevatorAnimator.SetBool("OpenElevatorDoors", false);
         }
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.white;
+        Gizmos.DrawWireCube(new Vector3(transform.position.x + 1.5f, transform.position.y + 2f, transform.position.z - 0.5f), new Vector3(4, 6, 4));
+    }
 }

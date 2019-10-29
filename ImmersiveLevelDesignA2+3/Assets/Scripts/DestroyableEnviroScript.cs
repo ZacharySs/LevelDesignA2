@@ -188,7 +188,7 @@ public class DestroyableEnviroScript : MonoBehaviour
                 if (hallwayDoorScript)
                 {
 
-                    hallwayDoorScript.StopDoorAnim();
+                    hallwayDoorScript.StopDoorDamaged();
 
                     if (lockLight)
                     {
