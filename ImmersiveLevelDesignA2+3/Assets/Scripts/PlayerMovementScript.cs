@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class PlayerMovementScript : MonoBehaviour
@@ -14,15 +15,24 @@ public class PlayerMovementScript : MonoBehaviour
     CharacterController charController;
     Vector3 moveDir;
 
+    bool canWindowTeleport = false;
+    public GameObject interactionText;
+
+
     // Start is called before the first frame update
     void Start()
     {
         //rb = GetComponent<Rigidbody>();
-        if (GameObject.Find("Spawn"))
+        if (GameObject.Find("Spawn") && SceneManager.GetActiveScene().name != "Level1")
         {
             transform.position = GameObject.Find("Spawn").transform.position;
         }
         charController = GetComponent<CharacterController>();
+
+        if (interactionText)
+        {
+            interactionText.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -88,5 +98,55 @@ public class PlayerMovementScript : MonoBehaviour
         //transform.position = playerPosition;
         //rb.velocity = new Vector3(0, 0, 0);   //Freeze velocity
 
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (canWindowTeleport)
+            {
+                if (GameObject.Find("WindowTeleportLocation"))
+                    transform.position = GameObject.Find("WindowTeleportLocation").transform.position;
+                canWindowTeleport = false;
+            }
+        }
+
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "WindowTrigger")
+        {
+            if (interactionText)
+            {
+                interactionText.SetActive(true);
+            }
+            canWindowTeleport = true;
+        }
+
+        if (other.GetComponent<DoorConsoleScript>())
+        {
+            if (interactionText)
+            {
+                interactionText.SetActive(true);
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "WindowTrigger")
+        {
+            if (interactionText)
+            {
+                interactionText.SetActive(false);
+            }
+            canWindowTeleport = true;
+        }
+
+        if (other.GetComponent<DoorConsoleScript>())
+        {
+            if (interactionText)
+            {
+                interactionText.SetActive(false);
+            }
+        }
     }
 }

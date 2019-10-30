@@ -6,7 +6,6 @@ using UnityEngine;
 public class IsometricCameraScript : MonoBehaviour
 {
     public GameObject player;
-    public GameObject subtitleText;
 
     public float height;
     public float zDisp;
@@ -15,7 +14,6 @@ public class IsometricCameraScript : MonoBehaviour
 
     public float cameraSpeed = 1.0f;
     private Vector3 newCamPos;
-    [HideInInspector]
     public bool inCutscene;
     static int cutsceneNum;
 
@@ -30,28 +28,14 @@ public class IsometricCameraScript : MonoBehaviour
         }
     }
 
-    IEnumerator L1WindowCutscene()
+    public void CutsceneFocus(Vector3 focusPos)
     {
-        inCutscene = true;
-
-        // Find open window object and set newCamPos = openwindow.transform.position;
-
-        yield return new WaitForSeconds(5f);
-        inCutscene = false;
+        StartCoroutine(CutsceneCoroutine(focusPos));
     }
-
-    IEnumerator L1ElevatorCutscene()
+    IEnumerator CutsceneCoroutine(Vector3 focusPos)
     {
         inCutscene = true;
-
-        GameObject focus = GameObject.FindGameObjectWithTag("Elevator");
-        newCamPos = focus.transform.position;
-
-        if (subtitleText)
-        {
-
-        }
-
+        newCamPos = focusPos;
         yield return new WaitForSeconds(5f);
         inCutscene = false;
     }
@@ -61,7 +45,7 @@ public class IsometricCameraScript : MonoBehaviour
     {
 
         //If Player Alive...
-        if (player && !inCutscene)
+        if (player)
         {
             CameraMovement();
         }
@@ -71,12 +55,14 @@ public class IsometricCameraScript : MonoBehaviour
     //Camera Pans (Lerps) towards position above player avatar
     void CameraMovement()
     {
+        if (!inCutscene)
+        {
+            newCamPos = player.transform.position;
 
-        newCamPos = player.transform.position;
-
-        newCamPos.y = player.transform.position.y + height;
-        newCamPos.z = player.transform.position.z - zDisp + Random.Range(-camShake, camShake);
-        newCamPos.x = player.transform.position.x - zDisp + Random.Range(-camShake, camShake);
+            newCamPos.y = player.transform.position.y + height;
+            newCamPos.z = player.transform.position.z - zDisp + Random.Range(-camShake, camShake);
+            newCamPos.x = player.transform.position.x - zDisp + Random.Range(-camShake, camShake);
+        }
 
         transform.position = Vector3.Lerp(transform.position, newCamPos, cameraSpeed * Time.deltaTime);
 

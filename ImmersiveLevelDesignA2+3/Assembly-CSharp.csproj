@@ -98,6 +98,7 @@
     <Compile Include="Assets\Scripts\Level 2\Doors\LockLightScript.cs" />
     <Compile Include="Assets\Scripts\Level 2\Doors\SingleDoorScript.cs" />
     <Compile Include="Assets\Scripts\PauseMenuScript.cs" />
+    <Compile Include="Assets\Scripts\PlayerCutsceneScript.cs" />
     <Compile Include="Assets\Scripts\PlayerKeycardScript.cs" />
     <Compile Include="Assets\Scripts\PlayerMovementScript.cs" />
     <Compile Include="Assets\Scripts\PlayerWeaponScript.cs" />
@@ -133,27 +134,19 @@
     <None Include="Assets\ProCore\ProBuilder\readme.txt" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_SmoothingPreview.shader" />
     <Reference Include="Unity.TextMeshPro.Editor">
-<<<<<<< HEAD
-      <HintPath>C:/Users/n10248137/Desktop/LevelDesignA2/ImmersiveLevelDesignA2+3/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
-=======
-      <HintPath>C:/Users/n9740309/Documents/LevelDesignA2/ImmersiveLevelDesignA2+3/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
->>>>>>> ed7936e0c3ae5802a9c8d6d2c5e6e01145a7024f
+      <HintPath>C:/Users/n9740309/Documents/IGB321/ImmersiveLevelDesignA2+3/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/n10248137/Desktop/LevelDesignA2/ImmersiveLevelDesignA2+3/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/n9740309/Documents/IGB321/ImmersiveLevelDesignA2+3/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/n10248137/Desktop/LevelDesignA2/ImmersiveLevelDesignA2+3/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/n9740309/Documents/IGB321/ImmersiveLevelDesignA2+3/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/n10248137/Desktop/LevelDesignA2/ImmersiveLevelDesignA2+3/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/n9740309/Documents/IGB321/ImmersiveLevelDesignA2+3/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-<<<<<<< HEAD
-      <HintPath>C:/Users/n10248137/Desktop/LevelDesignA2/ImmersiveLevelDesignA2+3/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
-=======
-      <HintPath>C:/Users/n9740309/Documents/LevelDesignA2/ImmersiveLevelDesignA2+3/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
->>>>>>> ed7936e0c3ae5802a9c8d6d2c5e6e01145a7024f
+      <HintPath>C:/Users/n9740309/Documents/IGB321/ImmersiveLevelDesignA2+3/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>W:/Program Files/Unity2018/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -360,53 +353,28 @@
       <HintPath>W:/Program Files/Unity2018/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="ProBuilderCore-Unity5">
-<<<<<<< HEAD
-      <HintPath>C:/Users/n10248137/Desktop/LevelDesignA2/ImmersiveLevelDesignA2+3/Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
+      <HintPath>C:/Users/n9740309/Documents/IGB321/ImmersiveLevelDesignA2+3/Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
     </Reference>
     <Reference Include="ProBuilderMeshOps-Unity5">
-      <HintPath>C:/Users/n10248137/Desktop/LevelDesignA2/ImmersiveLevelDesignA2+3/Assets/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
+      <HintPath>C:/Users/n9740309/Documents/IGB321/ImmersiveLevelDesignA2+3/Assets/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
     </Reference>
     <Reference Include="KdTreeLib">
-      <HintPath>C:/Users/n10248137/Desktop/LevelDesignA2/ImmersiveLevelDesignA2+3/Assets/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
+      <HintPath>C:/Users/n9740309/Documents/IGB321/ImmersiveLevelDesignA2+3/Assets/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
     </Reference>
     <Reference Include="pb_Stl">
-      <HintPath>C:/Users/n10248137/Desktop/LevelDesignA2/ImmersiveLevelDesignA2+3/Assets/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
+      <HintPath>C:/Users/n9740309/Documents/IGB321/ImmersiveLevelDesignA2+3/Assets/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
     </Reference>
     <Reference Include="Poly2Tri">
-      <HintPath>C:/Users/n10248137/Desktop/LevelDesignA2/ImmersiveLevelDesignA2+3/Assets/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
+      <HintPath>C:/Users/n9740309/Documents/IGB321/ImmersiveLevelDesignA2+3/Assets/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/n10248137/Desktop/LevelDesignA2/ImmersiveLevelDesignA2+3/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/n9740309/Documents/IGB321/ImmersiveLevelDesignA2+3/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/n10248137/Desktop/LevelDesignA2/ImmersiveLevelDesignA2+3/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/n9740309/Documents/IGB321/ImmersiveLevelDesignA2+3/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/n10248137/Desktop/LevelDesignA2/ImmersiveLevelDesignA2+3/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
-=======
-      <HintPath>C:/Users/n9740309/Documents/LevelDesignA2/ImmersiveLevelDesignA2+3/Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
-    </Reference>
-    <Reference Include="ProBuilderMeshOps-Unity5">
-      <HintPath>C:/Users/n9740309/Documents/LevelDesignA2/ImmersiveLevelDesignA2+3/Assets/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
-    </Reference>
-    <Reference Include="KdTreeLib">
-      <HintPath>C:/Users/n9740309/Documents/LevelDesignA2/ImmersiveLevelDesignA2+3/Assets/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
-    </Reference>
-    <Reference Include="pb_Stl">
-      <HintPath>C:/Users/n9740309/Documents/LevelDesignA2/ImmersiveLevelDesignA2+3/Assets/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
-    </Reference>
-    <Reference Include="Poly2Tri">
-      <HintPath>C:/Users/n9740309/Documents/LevelDesignA2/ImmersiveLevelDesignA2+3/Assets/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/n9740309/Documents/LevelDesignA2/ImmersiveLevelDesignA2+3/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/n9740309/Documents/LevelDesignA2/ImmersiveLevelDesignA2+3/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/n9740309/Documents/LevelDesignA2/ImmersiveLevelDesignA2+3/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
->>>>>>> ed7936e0c3ae5802a9c8d6d2c5e6e01145a7024f
+      <HintPath>C:/Users/n9740309/Documents/IGB321/ImmersiveLevelDesignA2+3/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>W:/Program Files/Unity2018/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

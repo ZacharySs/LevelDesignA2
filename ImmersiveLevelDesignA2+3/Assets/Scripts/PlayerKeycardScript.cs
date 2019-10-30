@@ -12,6 +12,11 @@ public class PlayerKeycardScript : MonoBehaviour
 
     public Animator loadingTextAnimator;
 
+    private void Start()
+    {
+        loadingTextAnimator.SetBool("LoadingTextVisible", false);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "KeycardPickup")

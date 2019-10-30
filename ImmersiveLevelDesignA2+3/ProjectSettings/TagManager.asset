@@ -13,6 +13,9 @@ TagManager:
   - PlayerModel
   - KeycardPickup
   - LevelTransfer
+  - WindowTrigger
+  - Cutscene1Trigger
+  - Cutscene2Trigger
   layers:
   - Default
   - TransparentFX

@@ -83,7 +83,8 @@ GameObject:
   - component: {fileID: 353454205276345686}
   - component: {fileID: 6075973568142362666}
   - component: {fileID: 7790545018057133996}
-  - component: {fileID: 450633277}
+  - component: {fileID: 1159378875}
+  - component: {fileID: 3616098499734111545}
   m_Layer: 0
   m_Name: PlayerCC
   m_TagString: Player
@@ -144,6 +145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   avatar: {fileID: 353454205276345695}
   moveSpeed: 5
+  interactionText: {fileID: 0}
 --- !u!208 &353454205276345686
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -274,7 +276,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &450633277
+--- !u!114 &1159378875
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -289,6 +291,31 @@ MonoBehaviour:
   totalKeycards: 0
   isLoadingLevel: 0
   loadingTextAnimator: {fileID: 0}
+--- !u!114 &3616098499734111545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353454205276345695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d77e5495e72bc94499cdf461f4cce712, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  subtitleText: {fileID: 0}
+  cutsceneSubtitles:
+  - 'comms: The front''s pretty well guarded, Hyde. Probably better to find another
+    way around.'
+  - 'comms: '
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
 --- !u!1 &2191064087887821393
 GameObject:
   m_ObjectHideFlags: 0
@@ -551,15 +578,15 @@ PrefabInstance:
       objectReference: {fileID: 1201359260037377726}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7659294e06b0ad40a8462410c998b53, type: 3}
---- !u!198 &1201359260037377726 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 1585474974540804968, guid: e7659294e06b0ad40a8462410c998b53,
-    type: 3}
-  m_PrefabInstance: {fileID: 480945039432867286}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1324645903821004630 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1499345292205261440, guid: e7659294e06b0ad40a8462410c998b53,
+    type: 3}
+  m_PrefabInstance: {fileID: 480945039432867286}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1201359260037377726 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1585474974540804968, guid: e7659294e06b0ad40a8462410c998b53,
     type: 3}
   m_PrefabInstance: {fileID: 480945039432867286}
   m_PrefabAsset: {fileID: 0}
