@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:ImmersiveLevelDesignA2+3/Assets/Materials/HallwayLightMats/RedEmissionLight.mat.meta
-guid: 2fa59cb3312dc0a4cb217a7ab481084a
-=======
-guid: b249009be4de44aa1b028b7275760694
->>>>>>> ed7936e0c3ae5802a9c8d6d2c5e6e01145a7024f:ImmersiveLevelDesignA2+3/Assets/Character_Monster/Mesh/Materials/Material #1.mat.meta
+guid: 7acf34912ce964d1e8b5f06375710abe
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 2100000
