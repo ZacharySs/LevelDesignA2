@@ -80,7 +80,7 @@ public class ControlPanelScript : MonoBehaviour
 
     private void Disable()
     {
-        if (playerInRange == true & Input.GetKeyDown(KeyCode.E) & securityCameraTrigger.enabled == true & turretTrigger.enabled == true)
+        if (playerInRange == true && Input.GetKeyDown(KeyCode.E) && securityCameraTrigger.enabled == true && turretTrigger.enabled == true)
         {
             securityCameraTrigger.enabled = false;
             securityCameraLight.enabled = false;
