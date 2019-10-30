@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 607998496226830166, guid: 4b32f6b5825fc034bbcf0cedee239eae,
         type: 3}
       propertyPath: m_Name
-      value: L2_CommonArea_Wall-mod1
+      value: L2_CommonArea_Wall-mod1 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7955062547263874048, guid: 4b32f6b5825fc034bbcf0cedee239eae,
         type: 3}
@@ -71,6 +71,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 554543150212475097, guid: 4b32f6b5825fc034bbcf0cedee239eae,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 23245f82ab92b462c917ea90a904d433, type: 2}
+    - target: {fileID: 5024854396195609080, guid: 4b32f6b5825fc034bbcf0cedee239eae,
+        type: 3}
+      propertyPath: m_Extents.x
+      value: 1.5000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5024854396195609080, guid: 4b32f6b5825fc034bbcf0cedee239eae,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4847485895525718833, guid: 4b32f6b5825fc034bbcf0cedee239eae,
         type: 3}
@@ -722,16 +737,6 @@ PrefabInstance:
       propertyPath: m_selectedTriangles.Array.data[8]
       value: 29
       objectReference: {fileID: 0}
-    - target: {fileID: 5024854396195609080, guid: 4b32f6b5825fc034bbcf0cedee239eae,
-        type: 3}
-      propertyPath: m_Extents.x
-      value: 1.5000001
-      objectReference: {fileID: 0}
-    - target: {fileID: 5024854396195609080, guid: 4b32f6b5825fc034bbcf0cedee239eae,
-        type: 3}
-      propertyPath: m_Center.x
-      value: -0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 5216537931492721533, guid: 4b32f6b5825fc034bbcf0cedee239eae,
         type: 3}
       propertyPath: m_Size.x
@@ -742,5 +747,6 @@ PrefabInstance:
       propertyPath: m_Center.x
       value: -0.50000143
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3483042825343408051, guid: 4b32f6b5825fc034bbcf0cedee239eae, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4b32f6b5825fc034bbcf0cedee239eae, type: 3}
