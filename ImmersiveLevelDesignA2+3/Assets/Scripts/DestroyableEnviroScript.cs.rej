@@ -1,0 +1,9 @@
+diff a/ImmersiveLevelDesignA2+3/Assets/Scripts/DestroyableEnviroScript.cs b/ImmersiveLevelDesignA2+3/Assets/Scripts/DestroyableEnviroScript.cs	(rejected hunks)
+@@ -204,6 +204,7 @@
+                 if (hallwayDoorScript)
+                 {
+ 
++                    hallwayDoorScript.StopDoorAnim();
+ 
+                     if (lockLight)
+                     {
