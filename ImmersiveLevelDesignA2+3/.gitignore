@@ -1,9 +1,9 @@
-ImmersiveLevelDesignA2+3/[Ll]ibrary/
-ImmersiveLevelDesignA2+3/[Tt]emp/
-ImmersiveLevelDesignA2+3/[Oo]bj/
-ImmersiveLevelDesignA2+3/[Bb]uild/
-ImmersiveLevelDesignA2+3/[Bb]uilds/
-ImmersiveLevelDesignA2+3/Assets/AssetStoreTools*
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+Assets/AssetStoreTools*
 
 # Visual Studio cache directory
 .vs/
