@@ -53,16 +53,22 @@ public class PlayerWeaponScript : MonoBehaviour
         isoCamAnimator = Camera.main.GetComponent<Animator>();
 
         hudCanvas = GameObject.Find("HUDCanvas");
+        if (GameObject.Find("AmmoText"))
+            ammoText = GameObject.Find("AmmoText").GetComponent<Text>();
+        if (GameObject.Find("WeaponText"))
+        {
+            weaponText = GameObject.Find("WeaponText").GetComponent<Text>();
+            weaponTextPos = weaponText.rectTransform.anchoredPosition;
+            weaponTextRot = weaponText.rectTransform.rotation.eulerAngles;
+            weaponTextFontSize = weaponText.fontSize;
+        }
 
-        ammoText = GameObject.Find("AmmoText").GetComponent<Text>();
+        if (GameObject.Find("RedoutImage"))
+        {
+            redoutImage = GameObject.Find("RedoutImage");
+            redoutAnimator = redoutImage.GetComponent<Animator>();
+        }
 
-        weaponText = GameObject.Find("WeaponText").GetComponent<Text>();
-        weaponTextPos = weaponText.rectTransform.anchoredPosition;
-        weaponTextRot = weaponText.rectTransform.rotation.eulerAngles;
-        weaponTextFontSize = weaponText.fontSize;
-
-        redoutImage = GameObject.Find("RedoutImage");
-        redoutAnimator = redoutImage.GetComponent<Animator>();
 
         fireLocations = new GameObject[] { transform.Find("FireLocation1").gameObject,
                                            transform.Find("FireLocation2").gameObject,
