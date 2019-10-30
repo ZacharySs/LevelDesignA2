@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/Scenes/Level 1/Level1 (Lachlan).unity
-  isLoaded: 1
-  isActive: 1
