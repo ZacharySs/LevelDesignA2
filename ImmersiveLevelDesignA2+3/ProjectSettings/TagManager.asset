@@ -12,6 +12,8 @@ TagManager:
   - PlayerModel
   - ElevatorLevelTrigger
   - KeycardPickup
+  - Turret
+  - HallwayDoor
   layers:
   - Default
   - TransparentFX
