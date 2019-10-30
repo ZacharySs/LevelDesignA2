@@ -204,7 +204,7 @@ public class DestroyableEnviroScript : MonoBehaviour
                 if (hallwayDoorScript)
                 {
 
-                    hallwayDoorScript.StopDoorDamaged();
+                    hallwayDoorScript.StopDoorAnim();
 
                     if (lockLight)
                     {
@@ -248,10 +248,15 @@ public class DestroyableEnviroScript : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        if (!isHardWall)
+        if (isHardWall)
+        {
+            Gizmos.color = Color.blue;
+        }
+        else
         {
             Gizmos.color = Color.red;
-            Gizmos.DrawLine(transform.position, transform.position + Vector3.up * 5);
         }
+
+        Gizmos.DrawLine(transform.position, transform.position + Vector3.up * 5);
     }
 }
