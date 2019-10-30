@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class IsometricCameraScript : MonoBehaviour
 {
     public GameObject player;
+    public GameObject subtitleText;
 
     public float height;
     public float zDisp;
@@ -13,11 +15,45 @@ public class IsometricCameraScript : MonoBehaviour
 
     public float cameraSpeed = 1.0f;
     private Vector3 newCamPos;
+    [HideInInspector]
+    public bool inCutscene;
+    static int cutsceneNum;
 
     // Use this for initialization
     void Start()
     {
         transform.position = new Vector3(transform.position.x, height, transform.position.z - zDisp);
+
+        if (SceneManager.GetActiveScene().name == "Level1")
+        {
+            cutsceneNum = 1;
+        }
+    }
+
+    IEnumerator L1WindowCutscene()
+    {
+        inCutscene = true;
+
+        // Find open window object and set newCamPos = openwindow.transform.position;
+
+        yield return new WaitForSeconds(5f);
+        inCutscene = false;
+    }
+
+    IEnumerator L1ElevatorCutscene()
+    {
+        inCutscene = true;
+
+        GameObject focus = GameObject.FindGameObjectWithTag("Elevator");
+        newCamPos = focus.transform.position;
+
+        if (subtitleText)
+        {
+
+        }
+
+        yield return new WaitForSeconds(5f);
+        inCutscene = false;
     }
 
     // Update is called once per frame
@@ -25,7 +61,7 @@ public class IsometricCameraScript : MonoBehaviour
     {
 
         //If Player Alive...
-        if (player)
+        if (player && !inCutscene)
         {
             CameraMovement();
         }

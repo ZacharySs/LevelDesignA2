@@ -15,7 +15,14 @@ public class ElevatorScript : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            elevatorAnimator.SetBool("OpenElevatorDoors", true);
+            if (!other.GetComponent<PlayerKeycardScript>().isLoadingLevel)
+            {
+                elevatorAnimator.SetBool("OpenElevatorDoors", true);
+            }
+            else
+            {
+                elevatorAnimator.SetBool("OpenElevatorDoors", false);
+            }
         }
     }
     private void OnTriggerExit(Collider other)
