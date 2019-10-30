@@ -9,6 +9,10 @@ TagManager:
   - NavPlane
   - AmmoPickup
   - AKPickup
+  - Turret
+  - PlayerModel
+  - KeycardPickup
+  - LevelTransfer
   layers:
   - Default
   - TransparentFX

@@ -18,7 +18,10 @@ public class PlayerMovementScript : MonoBehaviour
     void Start()
     {
         //rb = GetComponent<Rigidbody>();
-
+        if (GameObject.Find("Spawn"))
+        {
+            transform.position = GameObject.Find("Spawn").transform.position;
+        }
         charController = GetComponent<CharacterController>();
     }
 
