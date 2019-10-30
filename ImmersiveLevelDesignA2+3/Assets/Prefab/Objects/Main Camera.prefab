@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 8855923460455200068}
   - component: {fileID: 8855923460455200069}
   - component: {fileID: 1327988432}
-  - component: {fileID: 1740936784064189689}
-  - component: {fileID: 6993312063455720936}
+  - component: {fileID: 1429268525}
+  - component: {fileID: 1429268526}
   m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -122,7 +122,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1740936784064189689
+--- !u!114 &1429268525
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -142,12 +142,12 @@ MonoBehaviour:
   finalBlitToCameraTarget: 0
   antialiasingMode: 1
   temporalAntialiasing:
-    jitterSpread: 0.75
-    sharpness: 0.25
-    stationaryBlending: 0.95
-    motionBlending: 0.85
+    jitterSpread: 0.838
+    sharpness: 1.35
+    stationaryBlending: 0.669
+    motionBlending: 0.888
   subpixelMorphologicalAntialiasing:
-    quality: 2
+    quality: 1
   fastApproximateAntialiasing:
     fastMode: 1
     keepAlpha: 0
@@ -176,13 +176,13 @@ MonoBehaviour:
       colorBlindnessType: 0
       colorBlindnessStrength: 1
   m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
-  m_ShowToolkit: 1
-  m_ShowCustomSorter: 1
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
   breakBeforeColorGrading: 0
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
---- !u!114 &6993312063455720936
+--- !u!114 &1429268526
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
