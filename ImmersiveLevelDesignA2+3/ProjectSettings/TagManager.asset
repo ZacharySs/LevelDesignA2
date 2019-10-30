@@ -9,11 +9,6 @@ TagManager:
   - NavPlane
   - AmmoPickup
   - AKPickup
-  - PlayerModel
-  - ElevatorLevelTrigger
-  - KeycardPickup
-  - Turret
-  - HallwayDoor
   layers:
   - Default
   - TransparentFX
