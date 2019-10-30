@@ -78,6 +78,7 @@ public class PlayerWeaponScript : MonoBehaviour
         }
 
         SelectWeapon(1);
+        UpdateAmmoCounter();
     }
 
     void Update()

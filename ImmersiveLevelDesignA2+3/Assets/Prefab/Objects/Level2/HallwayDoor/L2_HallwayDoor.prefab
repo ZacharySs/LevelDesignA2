@@ -13476,6 +13476,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lockLightMaterial:
+  - {fileID: 2100000, guid: 42cecd951cffdb045966d8a9f3ae1ea7, type: 2}
+  - {fileID: 2100000, guid: 45e527e005c15bb4fb66828e56d7dd0f, type: 2}
   - {fileID: 2100000, guid: 96cc97f4266f84df7a0c980204b0c356, type: 2}
   - {fileID: 2100000, guid: 0849013e093a440bf9a5a4fc2fa20920, type: 2}
   isLocked: 0

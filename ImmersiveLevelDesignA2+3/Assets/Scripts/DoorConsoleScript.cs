@@ -5,20 +5,28 @@ using UnityEngine;
 public class DoorConsoleScript : MonoBehaviour
 {
     GameObject[] doors;
-    GameObject closestDoor = null;
+    float closestDoorDistance = Mathf.Infinity;
 
+    [HideInInspector]
     public GameObject doorToUnlock;
     private HallwayDoorScript doorScriptToUnlock;
 
     void Start()
+    {
+        StartCoroutine(FindClosestDoorCoroutine());
+    }
+
+    IEnumerator FindClosestDoorCoroutine()
     {
         doors = GameObject.FindGameObjectsWithTag("HallwayDoor");
         foreach (GameObject door in doors)
         {
             if (door.GetComponent<HallwayDoorScript>().isConsoleUnlockable)
             {
-                if (closestDoor)
+                if (Vector3.Distance(door.transform.position, transform.position) < closestDoorDistance)
                 {
+                    doorToUnlock = door;
+                    closestDoorDistance = Vector3.Distance(door.transform.position, transform.position);
                 }
             }
         }
@@ -27,6 +35,7 @@ public class DoorConsoleScript : MonoBehaviour
         {
             doorScriptToUnlock = doorToUnlock.GetComponent<HallwayDoorScript>();
         }
+        yield return null;
     }
 
     private void OnTriggerStay(Collider other)

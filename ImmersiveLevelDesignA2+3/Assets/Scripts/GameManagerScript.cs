@@ -17,7 +17,8 @@ public class GameManagerScript : MonoBehaviour
     public Color L3_hardWallLightColor;
     public Color L3_softWallLightColor;
 
-    public float strobeColorIntensity = 1;
+    public float strobeColorIntensity = 1f;
+    public float flickerColorIntensity = 1f;
 
     public GameObject lockLightSparksEffect;
 
