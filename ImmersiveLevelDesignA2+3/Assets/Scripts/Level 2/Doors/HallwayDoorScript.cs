@@ -10,11 +10,6 @@ public class HallwayDoorScript : MonoBehaviour
 
     public bool isLocked;
 
-    public bool isConsoleUnlockable;
-
-    public bool isKeycardUnlockable;
-    public int requiredKeycards;
-
     DestroyableEnviroScript doorLScript;
     float doorLInitialHealth;
     DestroyableEnviroScript doorRScript;
@@ -28,89 +23,48 @@ public class HallwayDoorScript : MonoBehaviour
         doorLInitialHealth = doorLScript.health;
         doorRScript = gameObject.transform.Find("L2_HallwayDoor_R").GetComponent<DestroyableEnviroScript>();
         doorRInitialHealth = doorRScript.health;
-
+        
         lockLightScript = GetComponentInChildren<LockLightScript>();
 
         lockLightScript.ChangeDoorLock(isLocked);
     }
 
-    /// <summary>
-    /// This should be called with a door is damaged by a player weapon. It will permanently stop all door animations and lock the door.
-    /// </summary>
-    public void StopDoorDamaged()
+    public void StopDoorAnim()
     {
         animator.StopPlayback();
         animator.enabled = false;
-        isLocked = true;
         if (lockLightScript)
-            lockLightScript.ChangeDoorLock(isLocked);
+           lockLightScript.ChangeDoorLock(true);
     }
 
-    /// <summary>
-    ///  This should be called when the player approaches with the necessary number of keycards. OR, if this is a Console door, when the player interacts with the console.
-    /// </summary>
-    public void UnlockDoor()
+    public void ChangeDoorLock()
     {
-        isLocked = false;
+        isLocked = !isLocked;
         if (lockLightScript)
-            lockLightScript.ChangeDoorLock(isLocked);
+           lockLightScript.ChangeDoorLock(isLocked);
+
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (!isLocked && other.tag == "Player" || other.tag == "Enemy")
-        {
-            animator.SetBool("HallwayDoorOpen", false);
-        }
-    }
-    private void OnTriggerStay(Collider other)
-    {
-        if (!isLocked && other.tag == "Player" || other.tag == "Enemy")
-        {
-            animator.SetBool("HallwayDoorOpen", true);
-        }
-    }
     private void OnTriggerEnter(Collider other)
     {
-        if (isLocked && isKeycardUnlockable && other.tag == "Player")
+        if (!isLocked && other.tag == "Player")
         {
-            if (other.GetComponent<PlayerKeycardScript>().totalKeycards >= requiredKeycards)
-            {
-                UnlockDoor();
-            }
+            animator.SetTrigger("CycleHallwayDoor");
+        }
+        else if (other.tag == "Enemy")
+        {
+            animator.SetTrigger("CycleHallwayDoor");
         }
     }
-
-    private void OnDrawGizmos()
+    private void OnTriggerExit(Collider other)
     {
-        if (isLocked)
+        if (!isLocked && other.tag == "Player")
         {
-            Gizmos.color = Color.yellow;
-            Gizmos.DrawWireCube(transform.position, new Vector3(4, 4, 4));
+            animator.SetTrigger("CycleHallwayDoor");
         }
-        if (isConsoleUnlockable)
+        else if (other.tag == "Enemy")
         {
-
-            Gizmos.color = new Vector4(1f, 0.5f, 0f, 1f);
-            Gizmos.DrawWireCube(transform.position, new Vector3(4, 4, 4));
+            animator.SetTrigger("CycleHallwayDoor");
         }
-        if (isKeycardUnlockable)
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireCube(transform.position, new Vector3(4, 4, 4));
-
-            Gizmos.color = Color.green;
-            for (int i = 0; i < requiredKeycards; i++)
-            {
-                Gizmos.DrawWireSphere(new Vector3(transform.position.x, transform.position.y + 4.5f, transform.position.z - (1 * (requiredKeycards/2) - i)), 0.5f);
-            }
-
-        }
-        if (!isLocked)
-        {
-            Gizmos.color = Color.cyan;
-            Gizmos.DrawWireSphere(transform.position, 4f);
-        }
-
     }
 }

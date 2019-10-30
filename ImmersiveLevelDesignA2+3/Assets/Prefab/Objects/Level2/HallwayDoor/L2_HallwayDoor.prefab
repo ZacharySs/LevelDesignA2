@@ -13493,7 +13493,7 @@ GameObject:
   - component: {fileID: 131847980320700780}
   m_Layer: 2
   m_Name: L2_HallwayDoor
-  m_TagString: HallwayDoor
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13549,9 +13549,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLocked: 0
-  isConsoleUnlockable: 0
-  isKeycardUnlockable: 0
-  requiredKeycards: 0
 --- !u!65 &131847980320700780
 BoxCollider:
   m_ObjectHideFlags: 0
