@@ -126,8 +126,8 @@ MonoBehaviour:
       flipV: 0
       swapUV: 0
       fill: 1
-      scale: {x: 1, y: 1}
-      offset: {x: 0.12, y: 0.155}
+      scale: {x: 1, y: 1.05}
+      offset: {x: 0.495, y: -0.04}
       rotation: 0
       justify: 0
       localPivot: {x: 0.75, y: 0.9609375}
@@ -317,10 +317,10 @@ MonoBehaviour:
   - {x: -0, y: 0, z: 0}
   - {x: -1.5, y: 0, z: 0}
   _uv:
-  - {x: -0.12, y: -0.155}
-  - {x: 1.38, y: -0.155}
-  - {x: -0.12, y: 1.766875}
-  - {x: 1.38, y: 1.766875}
+  - {x: -0.495, y: -0.008046828}
+  - {x: 1.005, y: -0.008046828}
+  - {x: -0.495, y: 2.0099218}
+  - {x: 1.005, y: 2.0099218}
   - {x: 0, y: 0}
   - {x: 0.1875, y: 0}
   - {x: 0, y: 1.921875}
@@ -521,8 +521,8 @@ MonoBehaviour:
       flipV: 0
       swapUV: 0
       fill: 1
-      scale: {x: 1, y: 1}
-      offset: {x: -0.885, y: 0.155}
+      scale: {x: 1, y: 1.05}
+      offset: {x: 0.5, y: -0.04}
       rotation: 0
       justify: 0
       localPivot: {x: -0.75, y: 0.9609375}
@@ -712,10 +712,10 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 0}
   - {x: 1.5, y: 0, z: 0}
   _uv:
-  - {x: 0.885, y: -0.155}
-  - {x: -0.615, y: -0.155}
-  - {x: 0.885, y: 1.766875}
-  - {x: -0.615, y: 1.766875}
+  - {x: -0.5, y: -0.008046828}
+  - {x: -2, y: -0.008046828}
+  - {x: -0.5, y: 2.0099218}
+  - {x: -2, y: 2.0099218}
   - {x: 0, y: 0}
   - {x: -0.1875, y: 0}
   - {x: 0, y: 1.921875}
@@ -774,9 +774,17 @@ MonoBehaviour:
     areaError: 15
   asset_guid: 
   dontDestroyMeshOnDelete: 0
-  m_selectedFaces: 
-  m_SelectedEdges: []
-  m_selectedTriangles: 
+  m_selectedFaces: 00000000
+  m_SelectedEdges:
+  - x: 0
+    y: 1
+  - x: 2
+    y: 0
+  - x: 1
+    y: 3
+  - x: 3
+    y: 2
+  m_selectedTriangles: 000000000100000002000000010000000300000002000000
 --- !u!65 &2115212147
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2131,7 +2139,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 0.67768776, g: 0.7426459, b: 0.9150943, a: 1}
+  m_Color: {r: 0.40922797, g: 0.36209506, b: 0.745283, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30

@@ -47,7 +47,7 @@ Light:
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 0.5
@@ -64,7 +64,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
@@ -305,9 +305,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subtitleText: {fileID: 0}
   cutsceneSubtitles:
-  - 'comms: The front''s pretty well guarded, Hyde. Probably better to find another
-    way around.'
-  - 'comms: '
+  - The front's pretty well guarded... Probably better to find another way around.
+  - Gotta get to the elevator... Jekyll's gonna be on the 3rd floor.
   - 
   - 
   - 
@@ -571,22 +570,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.2
       objectReference: {fileID: 0}
-    - target: {fileID: 1585756077233812430, guid: e7659294e06b0ad40a8462410c998b53,
-        type: 3}
-      propertyPath: SubModule.subEmitters.Array.data[0].emitter
-      value: 
-      objectReference: {fileID: 1201359260037377726}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7659294e06b0ad40a8462410c998b53, type: 3}
 --- !u!4 &1324645903821004630 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1499345292205261440, guid: e7659294e06b0ad40a8462410c998b53,
-    type: 3}
-  m_PrefabInstance: {fileID: 480945039432867286}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &1201359260037377726 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 1585474974540804968, guid: e7659294e06b0ad40a8462410c998b53,
     type: 3}
   m_PrefabInstance: {fileID: 480945039432867286}
   m_PrefabAsset: {fileID: 0}
@@ -735,19 +723,8 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.2
       objectReference: {fileID: 0}
-    - target: {fileID: 1585756077233812430, guid: e7659294e06b0ad40a8462410c998b53,
-        type: 3}
-      propertyPath: SubModule.subEmitters.Array.data[0].emitter
-      value: 
-      objectReference: {fileID: 6854941004798854319}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7659294e06b0ad40a8462410c998b53, type: 3}
---- !u!198 &6854941004798854319 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 1585474974540804968, guid: e7659294e06b0ad40a8462410c998b53,
-    type: 3}
-  m_PrefabInstance: {fileID: 5269521147590686663}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6768812426268882247 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1499345292205261440, guid: e7659294e06b0ad40a8462410c998b53,
@@ -962,22 +939,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.2
       objectReference: {fileID: 0}
-    - target: {fileID: 1585756077233812430, guid: e7659294e06b0ad40a8462410c998b53,
-        type: 3}
-      propertyPath: SubModule.subEmitters.Array.data[0].emitter
-      value: 
-      objectReference: {fileID: 9188856612923965842}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7659294e06b0ad40a8462410c998b53, type: 3}
 --- !u!4 &9028419726096674938 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1499345292205261440, guid: e7659294e06b0ad40a8462410c998b53,
-    type: 3}
-  m_PrefabInstance: {fileID: 7603727025174721274}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &9188856612923965842 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 1585474974540804968, guid: e7659294e06b0ad40a8462410c998b53,
     type: 3}
   m_PrefabInstance: {fileID: 7603727025174721274}
   m_PrefabAsset: {fileID: 0}

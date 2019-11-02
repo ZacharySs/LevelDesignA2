@@ -7,6 +7,10 @@ public class PlayerMovementScript : MonoBehaviour
 {
     public GameObject avatar;
 
+    public float health = 100f;
+
+    IsometricCameraScript isoCamScript;
+
     //Movement
     public float moveSpeed = 50;
     private Vector3 playerPosition;
@@ -33,12 +37,28 @@ public class PlayerMovementScript : MonoBehaviour
         {
             interactionText.SetActive(false);
         }
+
+        isoCamScript = Camera.main.GetComponent<IsometricCameraScript>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Movement();
+        if (!isoCamScript.inCutscene)
+        {
+            Movement();
+        }
+    }
+
+    public void takeDamage(float thisDamage)
+    {
+        health -= thisDamage;
+
+        if (health <= 0)
+        {
+            GetComponent<PlayerKeycardScript>().RestartLevel();
+        }
+        health = Mathf.Clamp(health, 0f, 100f);
     }
 
     void FixedUpdate()

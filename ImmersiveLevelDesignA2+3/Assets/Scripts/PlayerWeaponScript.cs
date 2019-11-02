@@ -89,7 +89,7 @@ public class PlayerWeaponScript : MonoBehaviour
 
     void Update()
     {
-        if (Time.timeScale > 0)
+        if (Time.timeScale > 0 && !isoCamScript.inCutscene)
         {
             if (Input.GetMouseButton(0))
             {

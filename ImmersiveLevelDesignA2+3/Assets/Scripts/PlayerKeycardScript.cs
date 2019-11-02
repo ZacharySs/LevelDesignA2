@@ -12,9 +12,14 @@ public class PlayerKeycardScript : MonoBehaviour
 
     public Animator loadingTextAnimator;
 
+    PlayerCutsceneScript playerCutsceneScript;
+
+    AsyncOperation asyncLoad;
+
     private void Start()
     {
         loadingTextAnimator.SetBool("LoadingTextVisible", false);
+        playerCutsceneScript = GetComponent<PlayerCutsceneScript>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -25,20 +30,57 @@ public class PlayerKeycardScript : MonoBehaviour
             Destroy(other.gameObject);
         }
 
-        if (other.tag == "LevelTransfer" && totalKeycards > 0)
+        if (other.tag == "LevelTransfer" && totalKeycards > 0 && SceneManager.GetActiveScene().name != "Level3")
         {
-            if (SceneManager.GetActiveScene().name == "Level1")
-            {
-                SceneManager.LoadSceneAsync("Level2");
-                loadingTextAnimator.SetBool("LoadingTextVisible", true);
-                isLoadingLevel = true;
-            }
-            else if (SceneManager.GetActiveScene().name == "Level2")
-            {
-                SceneManager.LoadSceneAsync("Level3");
-                loadingTextAnimator.SetBool("LoadingTextVisible", true);
-                isLoadingLevel = true;
-            }
+            StartCoroutine(LoadLevelCoroutine());
+        }
+    }
+
+
+    public void RestartLevel()
+    {
+        StartCoroutine(RestartLevelCoroutine());
+    }
+
+    IEnumerator RestartLevelCoroutine()
+    {
+        yield return new WaitForSeconds(4f);
+
+        if (SceneManager.GetActiveScene().name == "Level1")
+        {
+            asyncLoad = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
+            playerCutsceneScript.RestartLevelSubtitle();
+            isLoadingLevel = true;
+        }
+
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+    }
+
+    IEnumerator LoadLevelCoroutine()
+    {
+        yield return new WaitForSeconds(4f);
+
+        if (SceneManager.GetActiveScene().name == "Level1")
+        {
+            asyncLoad = SceneManager.LoadSceneAsync("Level2");
+            loadingTextAnimator.SetBool("LoadingTextVisible", true);
+            playerCutsceneScript.LoadingNextLevelSubtitle();
+            isLoadingLevel = true;
+        }
+        else if (SceneManager.GetActiveScene().name == "Level2")
+        {
+            asyncLoad = SceneManager.LoadSceneAsync("Level3");
+            loadingTextAnimator.SetBool("LoadingTextVisible", true);
+            playerCutsceneScript.LoadingNextLevelSubtitle();
+            isLoadingLevel = true;
+        }
+
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
         }
     }
 }
