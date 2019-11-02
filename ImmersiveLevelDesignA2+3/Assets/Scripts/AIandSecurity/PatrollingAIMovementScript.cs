@@ -22,6 +22,7 @@ public class PatrollingAIMovementScript : MonoBehaviour
     private GameObject player;
     private GameObject playerModel;
     private Transform playerPos;
+    private Transform lastKnownPlayerPos;
 
     // Start is called before the first frame update
     void Start()
@@ -40,7 +41,7 @@ public class PatrollingAIMovementScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CheckPlayerPos();
+        //CheckPlayerPos();
         Alerted();
         navMesh.acceleration = speed;
         navMesh.stoppingDistance = stopDistance;
@@ -49,7 +50,7 @@ public class PatrollingAIMovementScript : MonoBehaviour
 
         if(alerted == true)
         {
-            target = playerPos;
+            target = lastKnownPlayerPos;
         }
 
         // Movement
@@ -78,17 +79,17 @@ public class PatrollingAIMovementScript : MonoBehaviour
         }
         navMesh.SetDestination(target.position);
     }
-
-    private void CheckPlayerPos()
-    {
-        playerPos = player.transform;
-    }
-    
+   
     private void Alerted()
     {
         if(playerWeaponScript.isFiring == true)
         {
             alerted = true;
+            lastKnownPlayerPos = player.transform;
+        }
+        else
+        {
+            alerted = false;
         }
         
     }
