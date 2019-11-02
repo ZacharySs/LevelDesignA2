@@ -102,6 +102,7 @@ MonoBehaviour:
   zDisp: -3
   camShake: 0
   cameraSpeed: 3
+  cutsceneSpeed: 2
   inCutscene: 0
 --- !u!95 &1327988432
 Animator:

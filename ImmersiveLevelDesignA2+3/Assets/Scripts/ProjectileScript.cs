@@ -101,22 +101,4 @@ public class ProjectileScript : MonoBehaviour
         }
         transform.position += Time.fixedDeltaTime * speed * transform.forward;
     }
-    /*
-    private void OnTriggerEnter(Collider otherObject)
-    {
-        if (otherObject.tag == "Enemy")
-        {
-            otherObject.GetComponent<PatrollingEnemyScript>().takeDamage(damage);
-            if (hitEffect)
-                Instantiate(hitEffect, transform.position, transform.rotation);
-            Destroy(this.gameObject);
-        }
-        else if (otherObject.tag == "Environment")
-        {
-            if (hitEffect)
-                Instantiate(hitEffect, transform.position, transform.rotation);
-            Destroy(this.gameObject);
-        }
-    }
-    */
 }

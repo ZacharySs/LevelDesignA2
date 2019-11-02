@@ -38,8 +38,8 @@ public class DestroyableEnviroScript : MonoBehaviour
         {
             lockLight = GetComponentInChildren<LockLightScript>().gameObject;
         }
-
-        StartCoroutine(SetColorsCoroutine());
+        if (!GetComponent<MansionDoorScript>())
+            StartCoroutine(SetColorsCoroutine());
     }
 
 
@@ -50,10 +50,11 @@ public class DestroyableEnviroScript : MonoBehaviour
         {
             if (SceneManager.GetActiveScene().name == "Level2")
                 baseEmissiveColor = gameManagerScript.L2_softWallEmissionColor;
-            else if (SceneManager.GetActiveScene().name == "Level3") { 
+            else if (SceneManager.GetActiveScene().name == "Level3")
+            { 
                 baseEmissiveColor = gameManagerScript.L3_softWallEmissionColor;
-
-            StartCoroutine(UpdateFlickeringColor());}
+                StartCoroutine(UpdateFlickeringColor());
+            }
         }
         else
         {
@@ -198,6 +199,7 @@ public class DestroyableEnviroScript : MonoBehaviour
         if (!isHardWall)
         {
             health -= thisDamage;
+            Debug.Log("Object took damage.");
 
             if (!isDamaged)
             {
@@ -215,6 +217,8 @@ public class DestroyableEnviroScript : MonoBehaviour
                         Instantiate(sparksEffect, lockLight.transform.position + (lockLight.transform.up * 0.6f), Quaternion.Euler(lockLightEuler.x, lockLightEuler.y + 90, lockLightEuler.z), lockLight.transform);
                         Debug.Log("Sparks Instantiated.");
                     }
+                    StopCoroutine(UpdateStrobingColor());
+                    StartCoroutine(UpdateFlickeringColor());
                 }
                 else if (singleDoorScript)
                 {
@@ -229,9 +233,10 @@ public class DestroyableEnviroScript : MonoBehaviour
                         Instantiate(sparksEffect, lockLight.transform.position + (lockLight.transform.up * 0.1f), Quaternion.Euler(lockLightEuler.x + 90, lockLightEuler.y, lockLightEuler.z), lockLight.transform);
                         Debug.Log("Sparks Instantiated.");
                     }
+                    StopCoroutine(UpdateStrobingColor());
+                    StartCoroutine(UpdateFlickeringColor());
                 }
-                StopAllCoroutines();
-                StartCoroutine(UpdateFlickeringColor());
+
 
                 isDamaged = true;
             }

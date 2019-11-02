@@ -1460,6 +1460,7 @@ GameObject:
   - component: {fileID: 8678944250194626145}
   - component: {fileID: 4683923004047959258}
   - component: {fileID: 6376647501671986115}
+  - component: {fileID: 3781167456907837318}
   m_Layer: 0
   m_Name: L1_Door_Model
   m_TagString: Untagged
@@ -3075,7 +3076,7 @@ MonoBehaviour:
   dontDestroyMeshOnDelete: 0
   m_selectedFaces: 
   m_SelectedEdges: []
-  m_selectedTriangles: 000000004800000001000000020000004c00000003000000040000000500000006000000070000000800000009000000490000000a0000000b0000005100000016000000170000001a0000001f00000026000000270000002f00000036000000440000004500000046000000470000004a0000004b0000004e000000530000005a0000005b000000630000006a000000
+  m_selectedTriangles: 
 --- !u!65 &6376647501671986115
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3089,6 +3090,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.125, y: 2.501, z: 1.5}
   m_Center: {x: 0, y: -0.00000023841858, z: 0}
+--- !u!114 &3781167456907837318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3212301591454940596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad930b86554c6044d82b49aeed186dc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
+  isHardWall: 0
 --- !u!1 &3307451057322983653
 GameObject:
   m_ObjectHideFlags: 0
@@ -4546,7 +4561,7 @@ GameObject:
   - component: {fileID: 6327053230551961023}
   - component: {fileID: 9027667014307439576}
   - component: {fileID: 327927007910237883}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: OpenL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4609,7 +4624,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &7900665628339136049
 Transform:
@@ -4671,7 +4686,7 @@ GameObject:
   - component: {fileID: 6280987861135807422}
   - component: {fileID: 4158903061217307994}
   - component: {fileID: 2370239124891006956}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: OpenR
   m_TagString: Untagged
   m_Icon: {fileID: 0}

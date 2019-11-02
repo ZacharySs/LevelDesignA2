@@ -13,7 +13,7 @@ public class IsometricCameraScript : MonoBehaviour
     public float camShake; // Camera shake magnitude is controlled by PlayerWeaponScript
 
     public float cameraSpeed = 1.0f;
-    public float cutsceneSpeed = 0.5f;
+    public float cutsceneSpeed = 1.0f;
     private Vector3 newCamPos;
     public bool inCutscene;
     static int cutsceneNum;
@@ -37,7 +37,7 @@ public class IsometricCameraScript : MonoBehaviour
     {
         inCutscene = true;
         newCamPos = focusPos;
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(5f);
         inCutscene = false;
     }
 
