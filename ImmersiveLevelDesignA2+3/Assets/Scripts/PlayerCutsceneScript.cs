@@ -40,7 +40,7 @@ public class PlayerCutsceneScript : MonoBehaviour
                 {
                     cutsceneNum = triggerCutsceneNum;
                     StartCoroutine("SubtitleCoroutine" + triggerCutsceneNum.ToString());
-                    //camAudio.PlayOneShot(cutsceneAudioClips[triggerCutsceneNum]);
+                    camAudio.PlayOneShot(cutsceneAudioClips[triggerCutsceneNum]);
                 }
             }
         }
