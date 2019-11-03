@@ -9,13 +9,9 @@ TagManager:
   - NavPlane
   - AmmoPickup
   - AKPickup
-  - Turret
   - PlayerModel
+  - ElevatorLevelTrigger
   - KeycardPickup
-  - LevelTransfer
-  - WindowTrigger
-  - Cutscene1Trigger
-  - Cutscene2Trigger
   layers:
   - Default
   - TransparentFX

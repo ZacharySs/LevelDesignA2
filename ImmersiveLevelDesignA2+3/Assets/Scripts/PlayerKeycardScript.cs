@@ -32,7 +32,10 @@ public class PlayerKeycardScript : MonoBehaviour
 
         if (other.tag == "LevelTransfer" && totalKeycards > 0 && SceneManager.GetActiveScene().name != "Level3")
         {
-            StartCoroutine(LoadLevelCoroutine());
+            if (asyncLoad != null)
+            {
+                StartCoroutine(LoadLevelCoroutine());
+            }
         }
     }
 
