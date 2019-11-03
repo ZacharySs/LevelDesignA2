@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 7707233007188347124}
   - component: {fileID: 7707233007188347126}
   - component: {fileID: 7707233007188347113}
-  - component: {fileID: 1747057981789030009}
-  - component: {fileID: 6126893522479184581}
   - component: {fileID: 5106718880830309386}
+  - component: {fileID: 611712294340533673}
+  - component: {fileID: 345632873999965264}
   m_Layer: 0
   m_Name: L3_Hallway_Turn_Corner
   m_TagString: Untagged
@@ -2580,32 +2580,6 @@ MonoBehaviour:
   m_selectedFaces: 
   m_SelectedEdges: []
   m_selectedTriangles: 
---- !u!65 &1747057981789030009
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7707233007188347112}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.25, y: 3, z: 2.25}
-  m_Center: {x: 0.125, y: 1.5, z: 0.29712677}
---- !u!65 &6126893522479184581
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7707233007188347112}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.25, y: 3, z: 2.25}
-  m_Center: {x: 0.125, y: 1.5, z: 0.29712677}
 --- !u!114 &5106718880830309386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2619,3 +2593,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  isHardWall: 1
+--- !u!208 &611712294340533673
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7707233007188347112}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.125, y: 1.5000001, z: 1.125}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.125, y: 1.5000001, z: 0.29700002}
+  m_TimeToStationary: 0.5
+--- !u!64 &345632873999965264
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7707233007188347112}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 0}

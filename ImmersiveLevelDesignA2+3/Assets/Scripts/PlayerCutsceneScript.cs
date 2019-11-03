@@ -143,13 +143,13 @@ public class PlayerCutsceneScript : MonoBehaviour
     }
     IEnumerator SubtitleCoroutine4()
     {
-        subtitleText.text = "Ok... seems like you'll need to go down another level. There's a keycard on this level, but it's behind a locked door.";
+        subtitleText.text = "Right... seems like you'll need to go down another level. There's a keycard on this level, but it's behind a locked door.";
 
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(8f);
 
         subtitleText.text = "You'll need to find a way around.";
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
 
         subtitleText.text = null;
     }

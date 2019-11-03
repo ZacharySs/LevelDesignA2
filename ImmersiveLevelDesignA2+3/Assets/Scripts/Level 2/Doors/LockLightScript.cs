@@ -28,7 +28,7 @@ public class LockLightScript : MonoBehaviour
                 lockLightMatIndex = 0;
             else if (hallwayDoorScript.isKeycardUnlockable)
                 lockLightMatIndex = 1;
-            else
+            else if (hallwayDoorScript.isLocked)
                 lockLightMatIndex = 2;
 
             foreach (var lockLight in lockLights)

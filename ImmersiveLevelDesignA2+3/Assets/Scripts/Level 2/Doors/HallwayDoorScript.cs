@@ -47,6 +47,38 @@ public class HallwayDoorScript : MonoBehaviour
         if (lockLightScript)
            lockLightScript.ChangeDoorLock(isLocked);
 
+
+        Renderer[] renderers = GetComponentsInChildren<Renderer>();
+        foreach (Renderer renderer in renderers)
+        {
+            Material[] sharedMaterials = renderer.sharedMaterials;
+            for (int i = 0; i < sharedMaterials.Length; i++)
+            {
+                if (renderer.gameObject.GetComponent<LockLightScript>())
+                {
+                    if (sharedMaterials[i].IsKeywordEnabled("_EMISSION"))
+                    {
+                        LockLightScript lockLightScript = GetComponentInChildren<LockLightScript>();
+                        if (isConsoleUnlockable)
+                        {
+                            renderer.materials[i].SetColor("_EmissionColor", lockLightScript.lockLightMaterial[0].GetColor("_EmissionColor"));
+                        }
+                        else if (isKeycardUnlockable)
+                        {
+                            renderer.materials[i].SetColor("_EmissionColor", lockLightScript.lockLightMaterial[1].GetColor("_EmissionColor"));
+                        }
+                        else if (isLocked)
+                        {
+                            renderer.materials[i].SetColor("_EmissionColor", lockLightScript.lockLightMaterial[2].GetColor("_EmissionColor"));
+                        }
+                        if (!isLocked)
+                        {
+                            renderer.materials[i].SetColor("_EmissionColor", lockLightScript.lockLightMaterial[3].GetColor("_EmissionColor"));
+                        }
+                    }
+                }
+            }
+        }
     }
 
     private void OnTriggerExit(Collider other)

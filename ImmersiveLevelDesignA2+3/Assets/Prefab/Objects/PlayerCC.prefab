@@ -144,6 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   avatar: {fileID: 353454205276345695}
+  health: 100
   moveSpeed: 5
   interactionText: {fileID: 0}
 --- !u!208 &353454205276345686
@@ -304,17 +305,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subtitleText: {fileID: 0}
-  cutsceneSubtitles:
-  - The front's pretty well guarded... Probably better to find another way around.
-  - Gotta get to the elevator... Jekyll's gonna be on the 3rd floor.
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  cutsceneAudioClips:
+  - {fileID: 8300000, guid: 723cf71850bf665459448d6e3960c9e0, type: 3}
+  - {fileID: 8300000, guid: 685a1d430650ed9468cea6eff47ed591, type: 3}
+  - {fileID: 8300000, guid: 878c66c22e6f9414a955755bb00388ff, type: 3}
+  - {fileID: 8300000, guid: c8eca031e025540469fab4f0c6c78f4e, type: 3}
+  - {fileID: 8300000, guid: 180db6c9cb0fec949a741da42a2c45c4, type: 3}
+  - {fileID: 8300000, guid: 3fa86419c0ccdbf4fb47cda214fe5888, type: 3}
+  - {fileID: 8300000, guid: af7d58c8d19ccb2438e27e5849d0ab70, type: 3}
+  detectionAudioClips:
+  - {fileID: 8300000, guid: 244419cb2b20ab84bb22cbdf1b9ed963, type: 3}
+  - {fileID: 8300000, guid: ff7819b15c36def44b084cf33d4ecedb, type: 3}
+  - {fileID: 8300000, guid: e205aac1cb61ee64f84e6c3f522e02e9, type: 3}
+  missionStateAudioClips:
+  - {fileID: 8300000, guid: ce09d79478f4023458b57624a950850e, type: 3}
+  - {fileID: 8300000, guid: 169a14e50444fd2499a86ef3db5d3406, type: 3}
 --- !u!1 &2191064087887821393
 GameObject:
   m_ObjectHideFlags: 0

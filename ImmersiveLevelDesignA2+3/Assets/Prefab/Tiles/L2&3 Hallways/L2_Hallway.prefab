@@ -84,6 +84,7 @@ GameObject:
   - component: {fileID: 4232929496494921816}
   - component: {fileID: 4806394178119149212}
   - component: {fileID: 2780237560860144184}
+  - component: {fileID: 1588370658432888411}
   m_Layer: 0
   m_Name: L2_Hallway_Wall (2)
   m_TagString: Untagged
@@ -1062,6 +1063,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.25, y: 3, z: 7}
   m_Center: {x: 4.625, y: 1.5, z: 3.5}
+--- !u!208 &1588370658432888411
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2763918510512905187}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.625, y: 1.5000001, z: 3.5000002}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 4.625, y: 1.5000001, z: 3.5000002}
+  m_TimeToStationary: 0.5
 --- !u!1 &3628181642937944525
 GameObject:
   m_ObjectHideFlags: 0
@@ -8290,6 +8307,7 @@ GameObject:
   - component: {fileID: 2913767876560689105}
   - component: {fileID: 7318631060953338556}
   - component: {fileID: 2860701368901811346}
+  - component: {fileID: 828441689138288098}
   m_Layer: 0
   m_Name: L2_Hallway_Wall (1)
   m_TagString: Untagged
@@ -9271,6 +9289,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.25, y: 3, z: 7}
   m_Center: {x: 4.625, y: 1.5, z: 3.5}
+--- !u!208 &828441689138288098
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5610494543598923456}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.625, y: 1.5000001, z: 3.5000002}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 4.625, y: 1.5000001, z: 3.5000002}
+  m_TimeToStationary: 0.5
 --- !u!1 &5880524196469307422
 GameObject:
   m_ObjectHideFlags: 0

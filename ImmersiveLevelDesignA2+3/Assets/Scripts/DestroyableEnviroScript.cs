@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using UnityEngine.AI;
 using UnityEngine;
 
 public class DestroyableEnviroScript : MonoBehaviour
@@ -19,7 +20,6 @@ public class DestroyableEnviroScript : MonoBehaviour
     HallwayDoorScript hallwayDoorScript;
     SingleDoorScript singleDoorScript;
     GameObject lockLight;
-
     Color baseEmissiveColor;
 
     void Start()
@@ -46,12 +46,67 @@ public class DestroyableEnviroScript : MonoBehaviour
 
     IEnumerator SetColorsCoroutine()
     {
-        if (!isHardWall && hallwayDoorScript == null)
+        if (!isHardWall)
         {
             if (SceneManager.GetActiveScene().name == "Level2")
+            {
                 baseEmissiveColor = gameManagerScript.L2_softWallEmissionColor;
+
+                Renderer[] renderers = GetComponentsInChildren<Renderer>();
+                foreach (Renderer renderer in renderers)
+                {
+                    Material[] sharedMaterials = renderer.sharedMaterials;
+                    for (int i = 0; i < sharedMaterials.Length; i++)
+                    {
+                        if (renderer.gameObject.GetComponent<LockLightScript>())
+                        {
+                            if (sharedMaterials[i].IsKeywordEnabled("_EMISSION"))
+                            {
+                                LockLightScript lockLightScript = GetComponentInChildren<LockLightScript>();
+                                if (hallwayDoorScript)
+                                {
+                                    if (hallwayDoorScript.isConsoleUnlockable)
+                                    {
+                                        renderer.materials[i].SetColor("_EmissionColor", lockLightScript.lockLightMaterial[0].GetColor("_EmissionColor"));
+                                    }
+                                    else if (hallwayDoorScript.isKeycardUnlockable)
+                                    {
+                                        renderer.materials[i].SetColor("_EmissionColor", lockLightScript.lockLightMaterial[1].GetColor("_EmissionColor"));
+                                    }
+                                    else if (hallwayDoorScript.isLocked)
+                                    {
+                                        renderer.materials[i].SetColor("_EmissionColor", lockLightScript.lockLightMaterial[2].GetColor("_EmissionColor"));
+                                    }
+                                    else
+                                    {
+                                        renderer.materials[i].SetColor("_EmissionColor", lockLightScript.lockLightMaterial[3].GetColor("_EmissionColor"));
+                                    }
+                                }
+                                else if (singleDoorScript)
+                                {
+                                    if (singleDoorScript.isLocked)
+                                    {
+                                        renderer.materials[i].SetColor("_EmissionColor", lockLightScript.lockLightMaterial[2].GetColor("_EmissionColor"));
+                                    }
+                                    else
+                                    {
+                                        renderer.materials[i].SetColor("_EmissionColor", lockLightScript.lockLightMaterial[3].GetColor("_EmissionColor"));
+                                    }
+                                }
+                            }
+                        }
+                        else
+                        {
+                            if (sharedMaterials[i].IsKeywordEnabled("_EMISSION"))
+                            {
+                                renderer.materials[i].SetColor("_EmissionColor", baseEmissiveColor);
+                            }
+                        }
+                    }
+                }
+            }
             else if (SceneManager.GetActiveScene().name == "Level3")
-            { 
+            {
                 baseEmissiveColor = gameManagerScript.L3_softWallEmissionColor;
                 StartCoroutine(UpdateFlickeringColor());
             }
@@ -59,7 +114,62 @@ public class DestroyableEnviroScript : MonoBehaviour
         else
         {
             if (SceneManager.GetActiveScene().name == "Level2")
+            {
                 baseEmissiveColor = gameManagerScript.L2_hardWallEmissionColor;
+
+                Renderer[] renderers = GetComponentsInChildren<Renderer>();
+                foreach (Renderer renderer in renderers)
+                {
+                    Material[] sharedMaterials = renderer.sharedMaterials;
+                    for (int i = 0; i < sharedMaterials.Length; i++)
+                    {
+                        if (renderer.gameObject.GetComponent<LockLightScript>())
+                        {
+                            if (sharedMaterials[i].IsKeywordEnabled("_EMISSION"))
+                            {
+                                LockLightScript lockLightScript = GetComponentInChildren<LockLightScript>();
+                                if (hallwayDoorScript)
+                                {
+                                    if (hallwayDoorScript.isConsoleUnlockable)
+                                    {
+                                        renderer.materials[i].SetColor("_EmissionColor", lockLightScript.lockLightMaterial[0].GetColor("_EmissionColor"));
+                                    }
+                                    else if (hallwayDoorScript.isKeycardUnlockable)
+                                    {
+                                        renderer.materials[i].SetColor("_EmissionColor", lockLightScript.lockLightMaterial[1].GetColor("_EmissionColor"));
+                                    }
+                                    else if (hallwayDoorScript.isLocked)
+                                    {
+                                        renderer.materials[i].SetColor("_EmissionColor", lockLightScript.lockLightMaterial[2].GetColor("_EmissionColor"));
+                                    }
+                                    else
+                                    {
+                                        renderer.materials[i].SetColor("_EmissionColor", lockLightScript.lockLightMaterial[3].GetColor("_EmissionColor"));
+                                    }
+                                }
+                                else if (singleDoorScript)
+                                {
+                                    if (singleDoorScript.isLocked)
+                                    {
+                                        renderer.materials[i].SetColor("_EmissionColor", lockLightScript.lockLightMaterial[2].GetColor("_EmissionColor"));
+                                    }
+                                    else
+                                    {
+                                        renderer.materials[i].SetColor("_EmissionColor", lockLightScript.lockLightMaterial[3].GetColor("_EmissionColor"));
+                                    }
+                                }
+                            }
+                        }
+                        else
+                        {
+                            if (sharedMaterials[i].IsKeywordEnabled("_EMISSION"))
+                            {
+                                renderer.materials[i].SetColor("_EmissionColor", baseEmissiveColor);
+                            }
+                        }
+                    }
+                }
+            }
             else if (SceneManager.GetActiveScene().name == "Level3")
             {
                 baseEmissiveColor = gameManagerScript.L3_hardWallEmissionColor;
@@ -86,21 +196,35 @@ public class DestroyableEnviroScript : MonoBehaviour
                         if (sharedMaterials[i].IsKeywordEnabled("_EMISSION"))
                         {
                             LockLightScript lockLightScript = GetComponentInChildren<LockLightScript>();
-                            if (hallwayDoorScript.isConsoleUnlockable)
+                            if (hallwayDoorScript)
                             {
-                                renderer.materials[i].SetColor("_EmissionColor", lockLightScript.lockLightMaterial[0].GetColor("_EmissionColor") * gameManagerScript.strobeColorIntensity);
+                                if (hallwayDoorScript.isConsoleUnlockable)
+                                {
+                                    renderer.materials[i].SetColor("_EmissionColor", lockLightScript.lockLightMaterial[0].GetColor("_EmissionColor"));
+                                }
+                                else if (hallwayDoorScript.isKeycardUnlockable)
+                                {
+                                    renderer.materials[i].SetColor("_EmissionColor", lockLightScript.lockLightMaterial[1].GetColor("_EmissionColor"));
+                                }
+                                else if (hallwayDoorScript.isLocked)
+                                {
+                                    renderer.materials[i].SetColor("_EmissionColor", lockLightScript.lockLightMaterial[2].GetColor("_EmissionColor"));
+                                }
+                                else
+                                {
+                                    renderer.materials[i].SetColor("_EmissionColor", lockLightScript.lockLightMaterial[3].GetColor("_EmissionColor"));
+                                }
                             }
-                            else if (hallwayDoorScript.isKeycardUnlockable)
+                            else if (singleDoorScript)
                             {
-                                renderer.materials[i].SetColor("_EmissionColor", lockLightScript.lockLightMaterial[1].GetColor("_EmissionColor") * gameManagerScript.strobeColorIntensity);
-                            }
-                            else if (hallwayDoorScript.isLocked)
-                            {
-                                renderer.materials[i].SetColor("_EmissionColor", lockLightScript.lockLightMaterial[2].GetColor("_EmissionColor") * gameManagerScript.strobeColorIntensity);
-                            }
-                            else
-                            {
-                                renderer.materials[i].SetColor("_EmissionColor", lockLightScript.lockLightMaterial[3].GetColor("_EmissionColor") * gameManagerScript.strobeColorIntensity);
+                                if (singleDoorScript.isLocked)
+                                {
+                                    renderer.materials[i].SetColor("_EmissionColor", lockLightScript.lockLightMaterial[2].GetColor("_EmissionColor"));
+                                }
+                                else
+                                {
+                                    renderer.materials[i].SetColor("_EmissionColor", lockLightScript.lockLightMaterial[3].GetColor("_EmissionColor"));
+                                }
                             }
                         }
                     }
@@ -143,21 +267,35 @@ public class DestroyableEnviroScript : MonoBehaviour
                         if (sharedMaterials[i].IsKeywordEnabled("_EMISSION"))
                         {
                             LockLightScript lockLightScript = GetComponentInChildren<LockLightScript>();
-                            if (hallwayDoorScript.isConsoleUnlockable)
+                            if (hallwayDoorScript)
                             {
-                                renderer.materials[i].SetColor("_EmissionColor", lockLightScript.lockLightMaterial[0].GetColor("_EmissionColor") * gameManagerScript.strobeColorIntensity);
+                                if (hallwayDoorScript.isConsoleUnlockable)
+                                {
+                                    renderer.materials[i].SetColor("_EmissionColor", lockLightScript.lockLightMaterial[0].GetColor("_EmissionColor"));
+                                }
+                                else if (hallwayDoorScript.isKeycardUnlockable)
+                                {
+                                    renderer.materials[i].SetColor("_EmissionColor", lockLightScript.lockLightMaterial[1].GetColor("_EmissionColor"));
+                                }
+                                else if (hallwayDoorScript.isLocked)
+                                {
+                                    renderer.materials[i].SetColor("_EmissionColor", lockLightScript.lockLightMaterial[2].GetColor("_EmissionColor"));
+                                }
+                                else
+                                {
+                                    renderer.materials[i].SetColor("_EmissionColor", lockLightScript.lockLightMaterial[3].GetColor("_EmissionColor"));
+                                }
                             }
-                            else if (hallwayDoorScript.isKeycardUnlockable)
+                            else if (singleDoorScript)
                             {
-                                renderer.materials[i].SetColor("_EmissionColor", lockLightScript.lockLightMaterial[1].GetColor("_EmissionColor") * gameManagerScript.strobeColorIntensity);
-                            }
-                            else if (hallwayDoorScript.isLocked)
-                            {
-                                renderer.materials[i].SetColor("_EmissionColor", lockLightScript.lockLightMaterial[2].GetColor("_EmissionColor") * gameManagerScript.strobeColorIntensity);
-                            }
-                            else
-                            {
-                                renderer.materials[i].SetColor("_EmissionColor", lockLightScript.lockLightMaterial[3].GetColor("_EmissionColor") * gameManagerScript.strobeColorIntensity);
+                                if (singleDoorScript.isLocked)
+                                {
+                                    renderer.materials[i].SetColor("_EmissionColor", lockLightScript.lockLightMaterial[2].GetColor("_EmissionColor"));
+                                }
+                                else
+                                {
+                                    renderer.materials[i].SetColor("_EmissionColor", lockLightScript.lockLightMaterial[3].GetColor("_EmissionColor"));
+                                }
                             }
                         }
                     }
@@ -236,7 +374,11 @@ public class DestroyableEnviroScript : MonoBehaviour
                     StopCoroutine(UpdateStrobingColor());
                     StartCoroutine(UpdateFlickeringColor());
                 }
-
+                if (GetComponent<NavMeshObstacle>())
+                {
+                    NavMeshObstacle navObstacle = GetComponent<NavMeshObstacle>();
+                    navObstacle.carving = true;
+                }
 
                 isDamaged = true;
             }

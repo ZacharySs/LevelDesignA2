@@ -7228,6 +7228,7 @@ GameObject:
   - component: {fileID: 5608383800485733043}
   - component: {fileID: 6786965031903895738}
   - component: {fileID: 4595113627555358286}
+  - component: {fileID: 8797737544222323340}
   m_Layer: 0
   m_Name: L2_Hallway_Wall (1)
   m_TagString: Untagged
@@ -8209,6 +8210,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.2500021, y: 3, z: 8.000002}
   m_Center: {x: 4.625001, y: 1.5, z: 3.5000026}
+--- !u!208 &8797737544222323340
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2177191303302171392}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.625, y: 1.5000001, z: 4}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 4.625, y: 1.5000001, z: 3.5000002}
+  m_TimeToStationary: 0.5
 --- !u!1 &2643148482901115039
 GameObject:
   m_ObjectHideFlags: 0

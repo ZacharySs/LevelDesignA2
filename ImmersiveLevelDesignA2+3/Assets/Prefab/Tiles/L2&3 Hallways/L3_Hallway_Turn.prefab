@@ -1,19 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!64 &3448809699241483019
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 645680411646492460}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 0}
 --- !u!1 &723093925914434053
 GameObject:
   m_ObjectHideFlags: 0
@@ -7946,20 +7932,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!64 &8722835251824645359
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6618510836550085443}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 0}
 --- !u!1 &7907788479257363755
 GameObject:
   m_ObjectHideFlags: 0
@@ -7975,6 +7947,7 @@ GameObject:
   - component: {fileID: 2431590390008582730}
   - component: {fileID: 1058951250505919284}
   - component: {fileID: 1459746386395560474}
+  - component: {fileID: 4634295004457747879}
   m_Layer: 0
   m_Name: L2_Hallway_Wall (2)
   m_TagString: Untagged
@@ -8955,6 +8928,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.2500012, y: 3, z: 5.000005}
   m_Center: {x: 4.6249995, y: 1.5, z: 4.4999976}
+--- !u!208 &4634295004457747879
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7907788479257363755}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.625, y: 1.5000001, z: 2.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 4.625, y: 1.5000001, z: 4.5}
+  m_TimeToStationary: 0.5
 --- !u!1 &8099034524841967728
 GameObject:
   m_ObjectHideFlags: 0
@@ -16114,6 +16103,7 @@ GameObject:
   - component: {fileID: 2013091373158555900}
   - component: {fileID: 246701898089104476}
   - component: {fileID: 6769170703388341409}
+  - component: {fileID: 4761288916516694279}
   m_Layer: 0
   m_Name: L2_Hallway_Wall (1)
   m_TagString: Untagged
@@ -17094,6 +17084,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.2500012, y: 3, z: 5.000005}
   m_Center: {x: 4.6249995, y: 1.5, z: 4.4999976}
+--- !u!208 &4761288916516694279
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9012134054941428097}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.625, y: 1.5000001, z: 2.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 4.625, y: 1.5000001, z: 4.5}
+  m_TimeToStationary: 0.5
 --- !u!1001 &1984513049548954248
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17161,21 +17167,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4635264567215796682, guid: 2577df095b034d14ab33b7c2f6a98b2d,
-        type: 3}
-      propertyPath: m_selectedFaces.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4635264567215796682, guid: 2577df095b034d14ab33b7c2f6a98b2d,
-        type: 3}
-      propertyPath: m_SelectedEdges.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4635264567215796682, guid: 2577df095b034d14ab33b7c2f6a98b2d,
-        type: 3}
-      propertyPath: m_selectedTriangles.Array.size
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4635264567215796686, guid: 2577df095b034d14ab33b7c2f6a98b2d,
         type: 3}
       propertyPath: m_Mesh
@@ -17186,12 +17177,6 @@ PrefabInstance:
 --- !u!4 &6618510836550085445 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4635264567215796685, guid: 2577df095b034d14ab33b7c2f6a98b2d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1984513049548954248}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &6618510836550085443 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4635264567215796683, guid: 2577df095b034d14ab33b7c2f6a98b2d,
     type: 3}
   m_PrefabInstance: {fileID: 1984513049548954248}
   m_PrefabAsset: {fileID: 0}
@@ -17267,16 +17252,13 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1747057981789030009, guid: a27fe1a48c92739408246f40372cb64f, type: 3}
-    - {fileID: 6126893522479184581, guid: a27fe1a48c92739408246f40372cb64f, type: 3}
+    - target: {fileID: 345632873999965264, guid: a27fe1a48c92739408246f40372cb64f,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a27fe1a48c92739408246f40372cb64f, type: 3}
---- !u!1 &645680411646492460 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7707233007188347112, guid: a27fe1a48c92739408246f40372cb64f,
-    type: 3}
-  m_PrefabInstance: {fileID: 7061782187451709380}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &645680411646492470 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7707233007188347122, guid: a27fe1a48c92739408246f40372cb64f,
