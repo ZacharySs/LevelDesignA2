@@ -38,13 +38,13 @@ public class PatrollingAISightScript : MonoBehaviour
         nav = GetComponent<NavMeshAgent>();
         col = GetComponentInChildren<SphereCollider>();
         //col = GetComponent<SphereCollider>();
-        Debug.Log(col);
+        //Debug.Log(col);
 
         player = GameObject.FindGameObjectWithTag("Player");
         playerModel = GameObject.FindGameObjectWithTag("PlayerModel");
-        Debug.Log(player);
+        //Debug.Log(player);
         
-        Debug.Log(playerModel);
+        //Debug.Log(playerModel);
         playerRend = playerModel.GetComponent<MeshRenderer>();
         storedColor = playerRend.material.GetColor("_Color");
     }
@@ -77,7 +77,7 @@ public class PatrollingAISightScript : MonoBehaviour
         {
             playerInSight = false;
             playerRend.material.SetColor("_Color", storedColor);
-            Debug.Log("Not Detected");
+            //Debug.Log("Not Detected");
 
             Vector3 direction = other.transform.position - transform.position;
             float angle = Vector3.Angle(direction, transform.forward);
@@ -93,7 +93,7 @@ public class PatrollingAISightScript : MonoBehaviour
                     {
                         playerInSight = true;
                         playerRend.material.SetColor("_Color", Color.red);
-                        Debug.Log("Detected");  
+                        //Debug.Log("Detected");  
                     }
                 }
             }

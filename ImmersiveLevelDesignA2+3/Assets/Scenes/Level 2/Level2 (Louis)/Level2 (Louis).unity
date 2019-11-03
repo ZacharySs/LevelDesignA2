@@ -187,7 +187,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh163474
+  m_Name: pb_Mesh13382
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -4813,11 +4813,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3344784170199361495, guid: d2ca3606b46c7424bb24231cf4ca796e,
-        type: 3}
-      propertyPath: wayPoints.Array.size
-      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3344784170199361495, guid: d2ca3606b46c7424bb24231cf4ca796e,
         type: 3}
@@ -9476,7 +9471,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh81228
+  m_Name: pb_Mesh13306
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -16294,6 +16289,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerCC
       objectReference: {fileID: 0}
+    - target: {fileID: 2191064087887821393, guid: 5b9a5347cfefdb841808a4622c4b3b2a,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerModel
+      objectReference: {fileID: 0}
     - target: {fileID: 353454205276345683, guid: 5b9a5347cfefdb841808a4622c4b3b2a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16359,11 +16359,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2191064087887821393, guid: 5b9a5347cfefdb841808a4622c4b3b2a,
-        type: 3}
-      propertyPath: m_TagString
-      value: PlayerModel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b9a5347cfefdb841808a4622c4b3b2a, type: 3}
